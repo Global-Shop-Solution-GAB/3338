@@ -1,0 +1,2173 @@
+Program.Sub.ScreenSU.Start
+
+Gui.F_Params..Create
+Gui.F_Params..Caption("Current Part Inspection Sheet")
+Gui.F_Params..Size(9150,7230)
+Gui.F_Params..Position(0,0)
+Gui.F_Params..AlwaysOnTop(False)
+Gui.F_Params..FontName("Arial")
+Gui.F_Params..FontSize(8)
+Gui.F_Params..ForeColor(0)
+Gui.F_Params..Backcolor(-2147483633)
+Gui.F_Params..ControlBox(True)
+Gui.F_Params..MaxButton(False)
+Gui.F_Params..MinButton(False)
+Gui.F_Params..MousePointer(0)
+Gui.F_Params..Moveable(True)
+Gui.F_Params..Sizeable(True)
+Gui.F_Params..ShowInTaskBar(True)
+Gui.F_Params..TitleBar(True)
+
+Gui.F_Params..Event(unload,ProgEnd)
+
+Gui.F_Params.lblPDesc.Create(label)
+Gui.F_Params.lblPDesc.Caption("Parameter Description")
+Gui.F_Params.lblPDesc.Visible(True)
+Gui.F_Params.lblPDesc.Size(1935,255)
+Gui.F_Params.lblPDesc.Zorder(1)
+Gui.F_Params.lblPDesc.Position(200,740)
+Gui.F_Params.lblPDesc.Enabled(True)
+Gui.F_Params.lblPDesc.Alignment(0)
+Gui.F_Params.lblPDesc.FontName("Arial")
+Gui.F_Params.lblPDesc.FontSize(8)
+Gui.F_Params.lblPDesc.Backcolor(-2147483633)
+Gui.F_Params.lblPDesc.BackStyle(0)
+Gui.F_Params.lblPDesc.Tooltip("")
+Gui.F_Params.lblPDesc.ControlGroup(0)
+
+
+Gui.F_Params.lblPValue.Create(label)
+Gui.F_Params.lblPValue.Caption("Parameter Value")
+Gui.F_Params.lblPValue.Visible(True)
+Gui.F_Params.lblPValue.Size(1260,255)
+Gui.F_Params.lblPValue.Zorder(1)
+Gui.F_Params.lblPValue.Position(3530,740)
+Gui.F_Params.lblPValue.Enabled(True)
+Gui.F_Params.lblPValue.Alignment(0)
+Gui.F_Params.lblPValue.FontName("Arial")
+Gui.F_Params.lblPValue.FontSize(8)
+Gui.F_Params.lblPValue.Backcolor(-2147483633)
+Gui.F_Params.lblPValue.BackStyle(0)
+Gui.F_Params.lblPValue.Tooltip("")
+Gui.F_Params.lblPValue.ControlGroup(0)
+
+
+Gui.F_Params.lblTest.Create(label)
+Gui.F_Params.lblTest.Caption("Test Required (Y/N)")
+Gui.F_Params.lblTest.Visible(True)
+Gui.F_Params.lblTest.Size(1605,360)
+Gui.F_Params.lblTest.Zorder(1)
+Gui.F_Params.lblTest.Position(5050,740)
+Gui.F_Params.lblTest.Enabled(True)
+Gui.F_Params.lblTest.Alignment(0)
+Gui.F_Params.lblTest.FontName("Arial")
+Gui.F_Params.lblTest.FontSize(8)
+Gui.F_Params.lblTest.Backcolor(-2147483633)
+Gui.F_Params.lblTest.BackStyle(0)
+Gui.F_Params.lblTest.Tooltip("")
+Gui.F_Params.lblTest.ControlGroup(0)
+
+
+Gui.F_Params.txtPDesc.Create(textbox)
+Gui.F_Params.txtPDesc.Text("")
+Gui.F_Params.txtPDesc.Visible(True)
+Gui.F_Params.txtPDesc.Size(3105,300)
+Gui.F_Params.txtPDesc.Zorder(0)
+Gui.F_Params.txtPDesc.Position(200,940)
+Gui.F_Params.txtPDesc.Enabled(True)
+Gui.F_Params.txtPDesc.Alignment(0)
+Gui.F_Params.txtPDesc.FontName("Arial")
+Gui.F_Params.txtPDesc.FontSize(8)
+Gui.F_Params.txtPDesc.Backcolor(-2147483643)
+Gui.F_Params.txtPDesc.BorderStyle(1)
+Gui.F_Params.txtPDesc.TabStop(True)
+Gui.F_Params.txtPDesc.TabIndex(3)
+Gui.F_Params.txtPDesc.Tooltip("")
+Gui.F_Params.txtPDesc.ControlGroup(0)
+Gui.F_Params.txtPDesc.DefaultValue("")
+
+
+Gui.F_Params.txtPVal.Create(textbox)
+Gui.F_Params.txtPVal.Text("")
+Gui.F_Params.txtPVal.Visible(True)
+Gui.F_Params.txtPVal.Size(1215,300)
+Gui.F_Params.txtPVal.Zorder(0)
+Gui.F_Params.txtPVal.Position(3505,940)
+Gui.F_Params.txtPVal.Enabled(True)
+Gui.F_Params.txtPVal.Alignment(0)
+Gui.F_Params.txtPVal.FontName("Arial")
+Gui.F_Params.txtPVal.FontSize(8)
+Gui.F_Params.txtPVal.Backcolor(-2147483643)
+Gui.F_Params.txtPVal.BorderStyle(1)
+Gui.F_Params.txtPVal.TabStop(True)
+Gui.F_Params.txtPVal.TabIndex(4)
+Gui.F_Params.txtPVal.Tooltip("")
+Gui.F_Params.txtPVal.ControlGroup(0)
+Gui.F_Params.txtPVal.DefaultValue("")
+
+
+Gui.F_Params.txtTReq.Create(textbox)
+Gui.F_Params.txtTReq.Text("Y")
+Gui.F_Params.txtTReq.Visible(True)
+Gui.F_Params.txtTReq.Size(510,300)
+Gui.F_Params.txtTReq.Zorder(0)
+Gui.F_Params.txtTReq.Position(5035,940)
+Gui.F_Params.txtTReq.Enabled(True)
+Gui.F_Params.txtTReq.Alignment(0)
+Gui.F_Params.txtTReq.FontName("Arial")
+Gui.F_Params.txtTReq.FontSize(8)
+Gui.F_Params.txtTReq.Backcolor(-2147483643)
+Gui.F_Params.txtTReq.BorderStyle(1)
+Gui.F_Params.txtTReq.MaxLength(1)
+Gui.F_Params.txtTReq.TabStop(True)
+Gui.F_Params.txtTReq.TabIndex(5)
+Gui.F_Params.txtTReq.Tooltip("")
+Gui.F_Params.txtTReq.ControlGroup(0)
+Gui.F_Params.txtTReq.DefaultValue("")
+
+Gui.F_Params.txtTReq.Event(lostfocus,UCase)
+
+Gui.F_Params.cmdSDN0.Create(button)
+Gui.F_Params.cmdSDN0.Caption("Save Line")
+Gui.F_Params.cmdSDN0.Visible(True)
+Gui.F_Params.cmdSDN0.Size(1155,375)
+Gui.F_Params.cmdSDN0.Zorder(0)
+Gui.F_Params.cmdSDN0.Position(200,1340)
+Gui.F_Params.cmdSDN0.Enabled(True)
+Gui.F_Params.cmdSDN0.FontName("Arial")
+Gui.F_Params.cmdSDN0.FontSize(8)
+Gui.F_Params.cmdSDN0.TabStop(True)
+Gui.F_Params.cmdSDN0.TabIndex(6)
+Gui.F_Params.cmdSDN0.Tooltip("")
+Gui.F_Params.cmdSDN0.ControlGroup(0)
+Gui.F_Params.cmdSDN0.DefaultValue("")
+
+Gui.F_Params.cmdSDN0.Event(click,Param_Buttons)
+
+Gui.F_Params.cmdSDN1.Create(button)
+Gui.F_Params.cmdSDN1.Caption("Delete Line")
+Gui.F_Params.cmdSDN1.Visible(True)
+Gui.F_Params.cmdSDN1.Size(1155,375)
+Gui.F_Params.cmdSDN1.Zorder(0)
+Gui.F_Params.cmdSDN1.Position(1425,1340)
+Gui.F_Params.cmdSDN1.Enabled(True)
+Gui.F_Params.cmdSDN1.FontName("Arial")
+Gui.F_Params.cmdSDN1.FontSize(8)
+Gui.F_Params.cmdSDN1.TabStop(True)
+Gui.F_Params.cmdSDN1.TabIndex(7)
+Gui.F_Params.cmdSDN1.Tooltip("")
+Gui.F_Params.cmdSDN1.ControlGroup(0)
+Gui.F_Params.cmdSDN1.DefaultValue("")
+
+Gui.F_Params.cmdSDN1.Event(click,Param_Buttons)
+
+Gui.F_Params.cmdSDN2.Create(button)
+Gui.F_Params.cmdSDN2.Caption("Add New Line")
+Gui.F_Params.cmdSDN2.Visible(True)
+Gui.F_Params.cmdSDN2.Size(1155,375)
+Gui.F_Params.cmdSDN2.Zorder(0)
+Gui.F_Params.cmdSDN2.Position(2660,1340)
+Gui.F_Params.cmdSDN2.Enabled(True)
+Gui.F_Params.cmdSDN2.FontName("Arial")
+Gui.F_Params.cmdSDN2.FontSize(8)
+Gui.F_Params.cmdSDN2.TabStop(True)
+Gui.F_Params.cmdSDN2.TabIndex(8)
+Gui.F_Params.cmdSDN2.Tooltip("")
+Gui.F_Params.cmdSDN2.ControlGroup(0)
+Gui.F_Params.cmdSDN2.DefaultValue("")
+
+Gui.F_Params.cmdSDN2.Event(click,Param_Buttons)
+
+Gui.F_Params.lvwParam.Create(listview)
+Gui.F_Params.lvwParam.Visible(True)
+Gui.F_Params.lvwParam.Size(8610,4710)
+Gui.F_Params.lvwParam.Zorder(0)
+Gui.F_Params.lvwParam.Position(145,1875)
+Gui.F_Params.lvwParam.Enabled(True)
+Gui.F_Params.lvwParam.BorderStyle(1)
+Gui.F_Params.lvwParam.FontName("Arial")
+Gui.F_Params.lvwParam.FontSize(8)
+Gui.F_Params.lvwParam.TabStop(True)
+Gui.F_Params.lvwParam.TabIndex(9)
+Gui.F_Params.lvwParam.Tooltip("")
+Gui.F_Params.lvwParam.View(3)
+Gui.F_Params.lvwParam.AddListViewColumn("Parameter Description",4200,0)
+Gui.F_Params.lvwParam.AddListViewColumn("Parameter Value",2300,1)
+Gui.F_Params.lvwParam.AddListViewColumn("Test Req'd",1500,2)
+
+Gui.F_Params.lvwParam.Event(lostfocus,lvwparam_click)
+Gui.F_Params.lvwParam.Event(itemclick,lvwparam_click)
+
+Gui.F_Params.txtKey.Create(textbox)
+Gui.F_Params.txtKey.Text("")
+Gui.F_Params.txtKey.Visible(False)
+Gui.F_Params.txtKey.Size(1215,300)
+Gui.F_Params.txtKey.Zorder(0)
+Gui.F_Params.txtKey.Position(6100,940)
+Gui.F_Params.txtKey.Enabled(True)
+Gui.F_Params.txtKey.Alignment(0)
+Gui.F_Params.txtKey.FontName("Arial")
+Gui.F_Params.txtKey.FontSize(8)
+Gui.F_Params.txtKey.Backcolor(-2147483643)
+Gui.F_Params.txtKey.BorderStyle(1)
+Gui.F_Params.txtKey.TabStop(True)
+Gui.F_Params.txtKey.TabIndex(10)
+Gui.F_Params.txtKey.Tooltip("")
+Gui.F_Params.txtKey.ControlGroup(0)
+Gui.F_Params.txtKey.DefaultValue("")
+
+
+Gui.F_Params.cmdPrint.Create(button)
+Gui.F_Params.cmdPrint.Caption("Print")
+Gui.F_Params.cmdPrint.Visible(True)
+Gui.F_Params.cmdPrint.Size(1155,375)
+Gui.F_Params.cmdPrint.Zorder(0)
+Gui.F_Params.cmdPrint.Position(7615,1340)
+Gui.F_Params.cmdPrint.Enabled(True)
+Gui.F_Params.cmdPrint.FontName("Arial")
+Gui.F_Params.cmdPrint.FontSize(8)
+Gui.F_Params.cmdPrint.TabStop(True)
+Gui.F_Params.cmdPrint.TabIndex(11)
+Gui.F_Params.cmdPrint.Tooltip("")
+Gui.F_Params.cmdPrint.ControlGroup(0)
+Gui.F_Params.cmdPrint.DefaultValue("")
+
+Gui.F_Params.cmdPrint.Event(click,Add_Rpt)
+
+Gui.F_Params.cmdSDN3.Create(button)
+Gui.F_Params.cmdSDN3.Caption("Copy Sheet")
+Gui.F_Params.cmdSDN3.Visible(True)
+Gui.F_Params.cmdSDN3.Size(1155,375)
+Gui.F_Params.cmdSDN3.Zorder(0)
+Gui.F_Params.cmdSDN3.Position(5125,1340)
+Gui.F_Params.cmdSDN3.Enabled(True)
+Gui.F_Params.cmdSDN3.FontName("Arial")
+Gui.F_Params.cmdSDN3.FontSize(8)
+Gui.F_Params.cmdSDN3.TabStop(True)
+Gui.F_Params.cmdSDN3.TabIndex(12)
+Gui.F_Params.cmdSDN3.Tooltip("")
+Gui.F_Params.cmdSDN3.ControlGroup(0)
+Gui.F_Params.cmdSDN3.DefaultValue("")
+
+Gui.F_Params.cmdSDN3.Event(click,Param_Buttons)
+
+Gui.F_Params.cmdSDN4.Create(button)
+Gui.F_Params.cmdSDN4.Caption("New Insp Sht")
+Gui.F_Params.cmdSDN4.Visible(True)
+Gui.F_Params.cmdSDN4.Size(1155,375)
+Gui.F_Params.cmdSDN4.Zorder(0)
+Gui.F_Params.cmdSDN4.Position(6375,1340)
+Gui.F_Params.cmdSDN4.Enabled(True)
+Gui.F_Params.cmdSDN4.FontName("Arial")
+Gui.F_Params.cmdSDN4.FontSize(8)
+Gui.F_Params.cmdSDN4.TabStop(True)
+Gui.F_Params.cmdSDN4.TabIndex(13)
+Gui.F_Params.cmdSDN4.Tooltip("")
+Gui.F_Params.cmdSDN4.ControlGroup(0)
+Gui.F_Params.cmdSDN4.DefaultValue("")
+
+Gui.F_Params.cmdSDN4.Event(click,Param_Buttons)
+
+Gui.F_Params.lblSeq.Create(label)
+Gui.F_Params.lblSeq.Caption("Sequence Number")
+Gui.F_Params.lblSeq.Visible(True)
+Gui.F_Params.lblSeq.Size(1935,255)
+Gui.F_Params.lblSeq.Zorder(0)
+Gui.F_Params.lblSeq.Position(230,110)
+Gui.F_Params.lblSeq.Enabled(True)
+Gui.F_Params.lblSeq.Alignment(0)
+Gui.F_Params.lblSeq.FontName("Arial")
+Gui.F_Params.lblSeq.FontSize(8)
+Gui.F_Params.lblSeq.Backcolor(-2147483633)
+Gui.F_Params.lblSeq.BackStyle(0)
+Gui.F_Params.lblSeq.Tooltip("")
+Gui.F_Params.lblSeq.ControlGroup(0)
+
+
+Gui.F_Params.txtSeq.Create(textbox)
+Gui.F_Params.txtSeq.Text("")
+Gui.F_Params.txtSeq.Visible(True)
+Gui.F_Params.txtSeq.Size(1215,300)
+Gui.F_Params.txtSeq.Zorder(0)
+Gui.F_Params.txtSeq.Position(200,325)
+Gui.F_Params.txtSeq.Enabled(True)
+Gui.F_Params.txtSeq.Alignment(0)
+Gui.F_Params.txtSeq.FontName("Arial")
+Gui.F_Params.txtSeq.FontSize(8)
+Gui.F_Params.txtSeq.Backcolor(-2147483643)
+Gui.F_Params.txtSeq.BorderStyle(1)
+Gui.F_Params.txtSeq.TabStop(True)
+Gui.F_Params.txtSeq.TabIndex(15)
+Gui.F_Params.txtSeq.Tooltip("")
+Gui.F_Params.txtSeq.ControlGroup(0)
+Gui.F_Params.txtSeq.DefaultValue("")
+
+Gui.F_Params.txtSeq.Event(lostfocus,Format_Seq)
+
+Gui.F_Params.cmdDelS.Create(button)
+Gui.F_Params.cmdDelS.Caption("Delete Seq")
+Gui.F_Params.cmdDelS.Visible(True)
+Gui.F_Params.cmdDelS.Size(1155,375)
+Gui.F_Params.cmdDelS.Zorder(0)
+Gui.F_Params.cmdDelS.Position(3905,1340)
+Gui.F_Params.cmdDelS.Enabled(True)
+Gui.F_Params.cmdDelS.FontName("Arial")
+Gui.F_Params.cmdDelS.FontSize(8)
+Gui.F_Params.cmdDelS.TabStop(True)
+Gui.F_Params.cmdDelS.TabIndex(16)
+Gui.F_Params.cmdDelS.Tooltip("")
+Gui.F_Params.cmdDelS.ControlGroup(0)
+Gui.F_Params.cmdDelS.DefaultValue("")
+
+Gui.F_Params.cmdDelS.Event(click,Param_Buttons)
+
+Gui.F_Insp_Sheet..Create
+Gui.F_Insp_Sheet..Caption("Inspection Sheet Maintenenace")
+Gui.F_Insp_Sheet..Size(10560,8835)
+Gui.F_Insp_Sheet..Position(0,0)
+Gui.F_Insp_Sheet..AlwaysOnTop(False)
+Gui.F_Insp_Sheet..FontName("Arial")
+Gui.F_Insp_Sheet..FontSize(8)
+Gui.F_Insp_Sheet..ForeColor(0)
+Gui.F_Insp_Sheet..Backcolor(-2147483633)
+Gui.F_Insp_Sheet..ControlBox(True)
+Gui.F_Insp_Sheet..MaxButton(True)
+Gui.F_Insp_Sheet..MinButton(True)
+Gui.F_Insp_Sheet..MousePointer(0)
+Gui.F_Insp_Sheet..Moveable(True)
+Gui.F_Insp_Sheet..Sizeable(True)
+Gui.F_Insp_Sheet..ShowInTaskBar(True)
+Gui.F_Insp_Sheet..TitleBar(True)
+
+Gui.F_Insp_Sheet..Event(unload,ProgEnd)
+
+Gui.F_Insp_Sheet.txtPDesc0.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc0.Text("")
+Gui.F_Insp_Sheet.txtPDesc0.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc0.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc0.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc0.Position(100,1165)
+Gui.F_Insp_Sheet.txtPDesc0.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc0.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc0.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc0.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc0.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc0.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc0.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc0.TabIndex(0)
+Gui.F_Insp_Sheet.txtPDesc0.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc0.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc0.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc1.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc1.Text("")
+Gui.F_Insp_Sheet.txtPDesc1.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc1.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc1.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc1.Position(100,1865)
+Gui.F_Insp_Sheet.txtPDesc1.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc1.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc1.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc1.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc1.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc1.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc1.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc1.TabIndex(1)
+Gui.F_Insp_Sheet.txtPDesc1.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc1.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc1.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc2.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc2.Text("")
+Gui.F_Insp_Sheet.txtPDesc2.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc2.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc2.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc2.Position(100,2545)
+Gui.F_Insp_Sheet.txtPDesc2.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc2.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc2.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc2.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc2.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc2.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc2.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc2.TabIndex(2)
+Gui.F_Insp_Sheet.txtPDesc2.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc2.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc2.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc3.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc3.Text("")
+Gui.F_Insp_Sheet.txtPDesc3.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc3.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc3.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc3.Position(100,3250)
+Gui.F_Insp_Sheet.txtPDesc3.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc3.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc3.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc3.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc3.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc3.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc3.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc3.TabIndex(3)
+Gui.F_Insp_Sheet.txtPDesc3.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc3.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc3.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc4.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc4.Text("")
+Gui.F_Insp_Sheet.txtPDesc4.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc4.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc4.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc4.Position(100,3965)
+Gui.F_Insp_Sheet.txtPDesc4.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc4.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc4.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc4.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc4.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc4.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc4.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc4.TabIndex(4)
+Gui.F_Insp_Sheet.txtPDesc4.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc4.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc4.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc5.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc5.Text("")
+Gui.F_Insp_Sheet.txtPDesc5.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc5.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc5.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc5.Position(100,4695)
+Gui.F_Insp_Sheet.txtPDesc5.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc5.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc5.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc5.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc5.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc5.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc5.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc5.TabIndex(5)
+Gui.F_Insp_Sheet.txtPDesc5.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc5.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc5.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc6.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc6.Text("")
+Gui.F_Insp_Sheet.txtPDesc6.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc6.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc6.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc6.Position(110,5405)
+Gui.F_Insp_Sheet.txtPDesc6.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc6.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc6.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc6.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc6.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc6.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc6.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc6.TabIndex(6)
+Gui.F_Insp_Sheet.txtPDesc6.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc6.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc6.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc7.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc7.Text("")
+Gui.F_Insp_Sheet.txtPDesc7.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc7.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc7.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc7.Position(105,6070)
+Gui.F_Insp_Sheet.txtPDesc7.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc7.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc7.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc7.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc7.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc7.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc7.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc7.TabIndex(7)
+Gui.F_Insp_Sheet.txtPDesc7.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc7.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc7.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc8.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc8.Text("")
+Gui.F_Insp_Sheet.txtPDesc8.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc8.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc8.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc8.Position(110,6760)
+Gui.F_Insp_Sheet.txtPDesc8.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc8.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc8.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc8.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc8.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc8.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc8.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc8.TabIndex(8)
+Gui.F_Insp_Sheet.txtPDesc8.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc8.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc8.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc9.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc9.Text("")
+Gui.F_Insp_Sheet.txtPDesc9.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc9.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc9.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc9.Position(105,7440)
+Gui.F_Insp_Sheet.txtPDesc9.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc9.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc9.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc9.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc9.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc9.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc9.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc9.TabIndex(9)
+Gui.F_Insp_Sheet.txtPDesc9.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc9.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc9.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.lblParam.Create(label)
+Gui.F_Insp_Sheet.lblParam.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam.Visible(True)
+Gui.F_Insp_Sheet.lblParam.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam.Zorder(1)
+Gui.F_Insp_Sheet.lblParam.Position(100,955)
+Gui.F_Insp_Sheet.lblParam.Enabled(True)
+Gui.F_Insp_Sheet.lblParam.Alignment(0)
+Gui.F_Insp_Sheet.lblParam.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam.FontSize(8)
+Gui.F_Insp_Sheet.lblParam.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam.Tooltip("")
+Gui.F_Insp_Sheet.lblParam.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam1.Create(label)
+Gui.F_Insp_Sheet.lblParam1.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam1.Visible(True)
+Gui.F_Insp_Sheet.lblParam1.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam1.Zorder(1)
+Gui.F_Insp_Sheet.lblParam1.Position(145,1655)
+Gui.F_Insp_Sheet.lblParam1.Enabled(True)
+Gui.F_Insp_Sheet.lblParam1.Alignment(0)
+Gui.F_Insp_Sheet.lblParam1.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam1.FontSize(8)
+Gui.F_Insp_Sheet.lblParam1.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam1.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam1.Tooltip("")
+Gui.F_Insp_Sheet.lblParam1.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam2.Create(label)
+Gui.F_Insp_Sheet.lblParam2.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam2.Visible(True)
+Gui.F_Insp_Sheet.lblParam2.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam2.Zorder(1)
+Gui.F_Insp_Sheet.lblParam2.Position(100,2350)
+Gui.F_Insp_Sheet.lblParam2.Enabled(True)
+Gui.F_Insp_Sheet.lblParam2.Alignment(0)
+Gui.F_Insp_Sheet.lblParam2.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam2.FontSize(8)
+Gui.F_Insp_Sheet.lblParam2.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam2.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam2.Tooltip("")
+Gui.F_Insp_Sheet.lblParam2.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam3.Create(label)
+Gui.F_Insp_Sheet.lblParam3.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam3.Visible(True)
+Gui.F_Insp_Sheet.lblParam3.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam3.Zorder(1)
+Gui.F_Insp_Sheet.lblParam3.Position(110,3065)
+Gui.F_Insp_Sheet.lblParam3.Enabled(True)
+Gui.F_Insp_Sheet.lblParam3.Alignment(0)
+Gui.F_Insp_Sheet.lblParam3.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam3.FontSize(8)
+Gui.F_Insp_Sheet.lblParam3.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam3.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam3.Tooltip("")
+Gui.F_Insp_Sheet.lblParam3.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam4.Create(label)
+Gui.F_Insp_Sheet.lblParam4.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam4.Visible(True)
+Gui.F_Insp_Sheet.lblParam4.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam4.Zorder(1)
+Gui.F_Insp_Sheet.lblParam4.Position(100,3765)
+Gui.F_Insp_Sheet.lblParam4.Enabled(True)
+Gui.F_Insp_Sheet.lblParam4.Alignment(0)
+Gui.F_Insp_Sheet.lblParam4.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam4.FontSize(8)
+Gui.F_Insp_Sheet.lblParam4.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam4.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam4.Tooltip("")
+Gui.F_Insp_Sheet.lblParam4.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam5.Create(label)
+Gui.F_Insp_Sheet.lblParam5.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam5.Visible(True)
+Gui.F_Insp_Sheet.lblParam5.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam5.Zorder(1)
+Gui.F_Insp_Sheet.lblParam5.Position(130,4450)
+Gui.F_Insp_Sheet.lblParam5.Enabled(True)
+Gui.F_Insp_Sheet.lblParam5.Alignment(0)
+Gui.F_Insp_Sheet.lblParam5.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam5.FontSize(8)
+Gui.F_Insp_Sheet.lblParam5.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam5.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam5.Tooltip("")
+Gui.F_Insp_Sheet.lblParam5.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam6.Create(label)
+Gui.F_Insp_Sheet.lblParam6.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam6.Visible(True)
+Gui.F_Insp_Sheet.lblParam6.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam6.Zorder(1)
+Gui.F_Insp_Sheet.lblParam6.Position(115,5185)
+Gui.F_Insp_Sheet.lblParam6.Enabled(True)
+Gui.F_Insp_Sheet.lblParam6.Alignment(0)
+Gui.F_Insp_Sheet.lblParam6.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam6.FontSize(8)
+Gui.F_Insp_Sheet.lblParam6.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam6.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam6.Tooltip("")
+Gui.F_Insp_Sheet.lblParam6.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam7.Create(label)
+Gui.F_Insp_Sheet.lblParam7.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam7.Visible(True)
+Gui.F_Insp_Sheet.lblParam7.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam7.Zorder(1)
+Gui.F_Insp_Sheet.lblParam7.Position(100,5885)
+Gui.F_Insp_Sheet.lblParam7.Enabled(True)
+Gui.F_Insp_Sheet.lblParam7.Alignment(0)
+Gui.F_Insp_Sheet.lblParam7.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam7.FontSize(8)
+Gui.F_Insp_Sheet.lblParam7.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam7.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam7.Tooltip("")
+Gui.F_Insp_Sheet.lblParam7.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam8.Create(label)
+Gui.F_Insp_Sheet.lblParam8.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam8.Visible(True)
+Gui.F_Insp_Sheet.lblParam8.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam8.Zorder(1)
+Gui.F_Insp_Sheet.lblParam8.Position(115,6540)
+Gui.F_Insp_Sheet.lblParam8.Enabled(True)
+Gui.F_Insp_Sheet.lblParam8.Alignment(0)
+Gui.F_Insp_Sheet.lblParam8.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam8.FontSize(8)
+Gui.F_Insp_Sheet.lblParam8.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam8.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam8.Tooltip("")
+Gui.F_Insp_Sheet.lblParam8.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam9.Create(label)
+Gui.F_Insp_Sheet.lblParam9.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam9.Visible(True)
+Gui.F_Insp_Sheet.lblParam9.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam9.Zorder(1)
+Gui.F_Insp_Sheet.lblParam9.Position(100,7240)
+Gui.F_Insp_Sheet.lblParam9.Enabled(True)
+Gui.F_Insp_Sheet.lblParam9.Alignment(0)
+Gui.F_Insp_Sheet.lblParam9.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam9.FontSize(8)
+Gui.F_Insp_Sheet.lblParam9.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam9.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam9.Tooltip("")
+Gui.F_Insp_Sheet.lblParam9.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.txtPDesc10.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc10.Text("")
+Gui.F_Insp_Sheet.txtPDesc10.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc10.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc10.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc10.Position(5600,1165)
+Gui.F_Insp_Sheet.txtPDesc10.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc10.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc10.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc10.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc10.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc10.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc10.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc10.TabIndex(20)
+Gui.F_Insp_Sheet.txtPDesc10.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc10.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc10.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc11.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc11.Text("")
+Gui.F_Insp_Sheet.txtPDesc11.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc11.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc11.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc11.Position(5600,1865)
+Gui.F_Insp_Sheet.txtPDesc11.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc11.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc11.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc11.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc11.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc11.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc11.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc11.TabIndex(21)
+Gui.F_Insp_Sheet.txtPDesc11.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc11.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc11.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc12.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc12.Text("")
+Gui.F_Insp_Sheet.txtPDesc12.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc12.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc12.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc12.Position(5600,2545)
+Gui.F_Insp_Sheet.txtPDesc12.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc12.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc12.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc12.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc12.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc12.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc12.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc12.TabIndex(22)
+Gui.F_Insp_Sheet.txtPDesc12.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc12.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc12.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc13.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc13.Text("")
+Gui.F_Insp_Sheet.txtPDesc13.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc13.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc13.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc13.Position(5600,3250)
+Gui.F_Insp_Sheet.txtPDesc13.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc13.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc13.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc13.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc13.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc13.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc13.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc13.TabIndex(23)
+Gui.F_Insp_Sheet.txtPDesc13.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc13.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc13.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc14.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc14.Text("")
+Gui.F_Insp_Sheet.txtPDesc14.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc14.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc14.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc14.Position(5600,3980)
+Gui.F_Insp_Sheet.txtPDesc14.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc14.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc14.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc14.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc14.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc14.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc14.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc14.TabIndex(24)
+Gui.F_Insp_Sheet.txtPDesc14.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc14.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc14.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc15.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc15.Text("")
+Gui.F_Insp_Sheet.txtPDesc15.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc15.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc15.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc15.Position(5600,4695)
+Gui.F_Insp_Sheet.txtPDesc15.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc15.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc15.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc15.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc15.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc15.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc15.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc15.TabIndex(25)
+Gui.F_Insp_Sheet.txtPDesc15.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc15.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc15.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc16.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc16.Text("")
+Gui.F_Insp_Sheet.txtPDesc16.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc16.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc16.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc16.Position(5600,5405)
+Gui.F_Insp_Sheet.txtPDesc16.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc16.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc16.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc16.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc16.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc16.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc16.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc16.TabIndex(26)
+Gui.F_Insp_Sheet.txtPDesc16.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc16.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc16.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc17.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc17.Text("")
+Gui.F_Insp_Sheet.txtPDesc17.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc17.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc17.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc17.Position(5600,6070)
+Gui.F_Insp_Sheet.txtPDesc17.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc17.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc17.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc17.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc17.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc17.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc17.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc17.TabIndex(27)
+Gui.F_Insp_Sheet.txtPDesc17.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc17.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc17.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc18.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc18.Text("")
+Gui.F_Insp_Sheet.txtPDesc18.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc18.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc18.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc18.Position(5600,6760)
+Gui.F_Insp_Sheet.txtPDesc18.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc18.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc18.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc18.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc18.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc18.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc18.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc18.TabIndex(28)
+Gui.F_Insp_Sheet.txtPDesc18.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc18.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc18.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.txtPDesc19.Create(textbox)
+Gui.F_Insp_Sheet.txtPDesc19.Text("")
+Gui.F_Insp_Sheet.txtPDesc19.Visible(True)
+Gui.F_Insp_Sheet.txtPDesc19.Size(4245,300)
+Gui.F_Insp_Sheet.txtPDesc19.Zorder(0)
+Gui.F_Insp_Sheet.txtPDesc19.Position(5600,7430)
+Gui.F_Insp_Sheet.txtPDesc19.Enabled(True)
+Gui.F_Insp_Sheet.txtPDesc19.Alignment(0)
+Gui.F_Insp_Sheet.txtPDesc19.FontName("Arial")
+Gui.F_Insp_Sheet.txtPDesc19.FontSize(8)
+Gui.F_Insp_Sheet.txtPDesc19.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtPDesc19.BorderStyle(1)
+Gui.F_Insp_Sheet.txtPDesc19.TabStop(True)
+Gui.F_Insp_Sheet.txtPDesc19.TabIndex(29)
+Gui.F_Insp_Sheet.txtPDesc19.Tooltip("")
+Gui.F_Insp_Sheet.txtPDesc19.ControlGroup(0)
+Gui.F_Insp_Sheet.txtPDesc19.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.lblParam10.Create(label)
+Gui.F_Insp_Sheet.lblParam10.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam10.Visible(True)
+Gui.F_Insp_Sheet.lblParam10.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam10.Zorder(1)
+Gui.F_Insp_Sheet.lblParam10.Position(5600,960)
+Gui.F_Insp_Sheet.lblParam10.Enabled(True)
+Gui.F_Insp_Sheet.lblParam10.Alignment(0)
+Gui.F_Insp_Sheet.lblParam10.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam10.FontSize(8)
+Gui.F_Insp_Sheet.lblParam10.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam10.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam10.Tooltip("")
+Gui.F_Insp_Sheet.lblParam10.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam11.Create(label)
+Gui.F_Insp_Sheet.lblParam11.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam11.Visible(True)
+Gui.F_Insp_Sheet.lblParam11.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam11.Zorder(1)
+Gui.F_Insp_Sheet.lblParam11.Position(5600,1660)
+Gui.F_Insp_Sheet.lblParam11.Enabled(True)
+Gui.F_Insp_Sheet.lblParam11.Alignment(0)
+Gui.F_Insp_Sheet.lblParam11.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam11.FontSize(8)
+Gui.F_Insp_Sheet.lblParam11.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam11.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam11.Tooltip("")
+Gui.F_Insp_Sheet.lblParam11.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam12.Create(label)
+Gui.F_Insp_Sheet.lblParam12.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam12.Visible(True)
+Gui.F_Insp_Sheet.lblParam12.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam12.Zorder(1)
+Gui.F_Insp_Sheet.lblParam12.Position(5600,2345)
+Gui.F_Insp_Sheet.lblParam12.Enabled(True)
+Gui.F_Insp_Sheet.lblParam12.Alignment(0)
+Gui.F_Insp_Sheet.lblParam12.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam12.FontSize(8)
+Gui.F_Insp_Sheet.lblParam12.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam12.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam12.Tooltip("")
+Gui.F_Insp_Sheet.lblParam12.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam13.Create(label)
+Gui.F_Insp_Sheet.lblParam13.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam13.Visible(True)
+Gui.F_Insp_Sheet.lblParam13.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam13.Zorder(1)
+Gui.F_Insp_Sheet.lblParam13.Position(5600,3045)
+Gui.F_Insp_Sheet.lblParam13.Enabled(True)
+Gui.F_Insp_Sheet.lblParam13.Alignment(0)
+Gui.F_Insp_Sheet.lblParam13.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam13.FontSize(8)
+Gui.F_Insp_Sheet.lblParam13.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam13.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam13.Tooltip("")
+Gui.F_Insp_Sheet.lblParam13.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam14.Create(label)
+Gui.F_Insp_Sheet.lblParam14.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam14.Visible(True)
+Gui.F_Insp_Sheet.lblParam14.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam14.Zorder(1)
+Gui.F_Insp_Sheet.lblParam14.Position(5615,3755)
+Gui.F_Insp_Sheet.lblParam14.Enabled(True)
+Gui.F_Insp_Sheet.lblParam14.Alignment(0)
+Gui.F_Insp_Sheet.lblParam14.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam14.FontSize(8)
+Gui.F_Insp_Sheet.lblParam14.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam14.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam14.Tooltip("")
+Gui.F_Insp_Sheet.lblParam14.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam15.Create(label)
+Gui.F_Insp_Sheet.lblParam15.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam15.Visible(True)
+Gui.F_Insp_Sheet.lblParam15.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam15.Zorder(1)
+Gui.F_Insp_Sheet.lblParam15.Position(5600,4490)
+Gui.F_Insp_Sheet.lblParam15.Enabled(True)
+Gui.F_Insp_Sheet.lblParam15.Alignment(0)
+Gui.F_Insp_Sheet.lblParam15.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam15.FontSize(8)
+Gui.F_Insp_Sheet.lblParam15.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam15.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam15.Tooltip("")
+Gui.F_Insp_Sheet.lblParam15.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam16.Create(label)
+Gui.F_Insp_Sheet.lblParam16.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam16.Visible(True)
+Gui.F_Insp_Sheet.lblParam16.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam16.Zorder(1)
+Gui.F_Insp_Sheet.lblParam16.Position(5600,5205)
+Gui.F_Insp_Sheet.lblParam16.Enabled(True)
+Gui.F_Insp_Sheet.lblParam16.Alignment(0)
+Gui.F_Insp_Sheet.lblParam16.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam16.FontSize(8)
+Gui.F_Insp_Sheet.lblParam16.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam16.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam16.Tooltip("")
+Gui.F_Insp_Sheet.lblParam16.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam17.Create(label)
+Gui.F_Insp_Sheet.lblParam17.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam17.Visible(True)
+Gui.F_Insp_Sheet.lblParam17.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam17.Zorder(1)
+Gui.F_Insp_Sheet.lblParam17.Position(5600,5860)
+Gui.F_Insp_Sheet.lblParam17.Enabled(True)
+Gui.F_Insp_Sheet.lblParam17.Alignment(0)
+Gui.F_Insp_Sheet.lblParam17.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam17.FontSize(8)
+Gui.F_Insp_Sheet.lblParam17.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam17.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam17.Tooltip("")
+Gui.F_Insp_Sheet.lblParam17.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam18.Create(label)
+Gui.F_Insp_Sheet.lblParam18.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam18.Visible(True)
+Gui.F_Insp_Sheet.lblParam18.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam18.Zorder(1)
+Gui.F_Insp_Sheet.lblParam18.Position(5600,6560)
+Gui.F_Insp_Sheet.lblParam18.Enabled(True)
+Gui.F_Insp_Sheet.lblParam18.Alignment(0)
+Gui.F_Insp_Sheet.lblParam18.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam18.FontSize(8)
+Gui.F_Insp_Sheet.lblParam18.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam18.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam18.Tooltip("")
+Gui.F_Insp_Sheet.lblParam18.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblParam19.Create(label)
+Gui.F_Insp_Sheet.lblParam19.Caption("Parameter Description")
+Gui.F_Insp_Sheet.lblParam19.Visible(True)
+Gui.F_Insp_Sheet.lblParam19.Size(1935,255)
+Gui.F_Insp_Sheet.lblParam19.Zorder(1)
+Gui.F_Insp_Sheet.lblParam19.Position(5615,7230)
+Gui.F_Insp_Sheet.lblParam19.Enabled(True)
+Gui.F_Insp_Sheet.lblParam19.Alignment(0)
+Gui.F_Insp_Sheet.lblParam19.FontName("Arial")
+Gui.F_Insp_Sheet.lblParam19.FontSize(8)
+Gui.F_Insp_Sheet.lblParam19.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblParam19.BackStyle(0)
+Gui.F_Insp_Sheet.lblParam19.Tooltip("")
+Gui.F_Insp_Sheet.lblParam19.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.lblISID.Create(label)
+Gui.F_Insp_Sheet.lblISID.Caption("Inspection Sheet ID")
+Gui.F_Insp_Sheet.lblISID.Visible(True)
+Gui.F_Insp_Sheet.lblISID.Size(1935,255)
+Gui.F_Insp_Sheet.lblISID.Zorder(1)
+Gui.F_Insp_Sheet.lblISID.Position(110,140)
+Gui.F_Insp_Sheet.lblISID.Enabled(True)
+Gui.F_Insp_Sheet.lblISID.Alignment(0)
+Gui.F_Insp_Sheet.lblISID.FontName("Arial")
+Gui.F_Insp_Sheet.lblISID.FontSize(8)
+Gui.F_Insp_Sheet.lblISID.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblISID.BackStyle(0)
+Gui.F_Insp_Sheet.lblISID.Tooltip("")
+Gui.F_Insp_Sheet.lblISID.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.txt21.Create(textbox)
+Gui.F_Insp_Sheet.txt21.Text("")
+Gui.F_Insp_Sheet.txt21.Visible(True)
+Gui.F_Insp_Sheet.txt21.Size(1215,300)
+Gui.F_Insp_Sheet.txt21.Zorder(0)
+Gui.F_Insp_Sheet.txt21.Position(70,330)
+Gui.F_Insp_Sheet.txt21.Enabled(True)
+Gui.F_Insp_Sheet.txt21.Alignment(0)
+Gui.F_Insp_Sheet.txt21.FontName("Arial")
+Gui.F_Insp_Sheet.txt21.FontSize(8)
+Gui.F_Insp_Sheet.txt21.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txt21.BorderStyle(1)
+Gui.F_Insp_Sheet.txt21.TabStop(True)
+Gui.F_Insp_Sheet.txt21.TabIndex(41)
+Gui.F_Insp_Sheet.txt21.Tooltip("")
+Gui.F_Insp_Sheet.txt21.ControlGroup(0)
+Gui.F_Insp_Sheet.txt21.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.lblISDesc.Create(label)
+Gui.F_Insp_Sheet.lblISDesc.Caption("Inspection Sheet Description")
+Gui.F_Insp_Sheet.lblISDesc.Visible(True)
+Gui.F_Insp_Sheet.lblISDesc.Size(2175,255)
+Gui.F_Insp_Sheet.lblISDesc.Zorder(1)
+Gui.F_Insp_Sheet.lblISDesc.Position(5585,185)
+Gui.F_Insp_Sheet.lblISDesc.Enabled(True)
+Gui.F_Insp_Sheet.lblISDesc.Alignment(0)
+Gui.F_Insp_Sheet.lblISDesc.FontName("Arial")
+Gui.F_Insp_Sheet.lblISDesc.FontSize(8)
+Gui.F_Insp_Sheet.lblISDesc.Backcolor(-2147483633)
+Gui.F_Insp_Sheet.lblISDesc.BackStyle(0)
+Gui.F_Insp_Sheet.lblISDesc.Tooltip("")
+Gui.F_Insp_Sheet.lblISDesc.ControlGroup(0)
+
+
+Gui.F_Insp_Sheet.txtISDesc.Create(textbox)
+Gui.F_Insp_Sheet.txtISDesc.Text("")
+Gui.F_Insp_Sheet.txtISDesc.Visible(True)
+Gui.F_Insp_Sheet.txtISDesc.Size(4275,300)
+Gui.F_Insp_Sheet.txtISDesc.Zorder(0)
+Gui.F_Insp_Sheet.txtISDesc.Position(5600,390)
+Gui.F_Insp_Sheet.txtISDesc.Enabled(True)
+Gui.F_Insp_Sheet.txtISDesc.Alignment(0)
+Gui.F_Insp_Sheet.txtISDesc.FontName("Arial")
+Gui.F_Insp_Sheet.txtISDesc.FontSize(8)
+Gui.F_Insp_Sheet.txtISDesc.Backcolor(-2147483643)
+Gui.F_Insp_Sheet.txtISDesc.BorderStyle(1)
+Gui.F_Insp_Sheet.txtISDesc.TabStop(True)
+Gui.F_Insp_Sheet.txtISDesc.TabIndex(43)
+Gui.F_Insp_Sheet.txtISDesc.Tooltip("")
+Gui.F_Insp_Sheet.txtISDesc.ControlGroup(0)
+Gui.F_Insp_Sheet.txtISDesc.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.cmdSave.Create(button)
+Gui.F_Insp_Sheet.cmdSave.Caption("Save")
+Gui.F_Insp_Sheet.cmdSave.Visible(True)
+Gui.F_Insp_Sheet.cmdSave.Size(855,375)
+Gui.F_Insp_Sheet.cmdSave.Zorder(0)
+Gui.F_Insp_Sheet.cmdSave.Position(100,7845)
+Gui.F_Insp_Sheet.cmdSave.Enabled(True)
+Gui.F_Insp_Sheet.cmdSave.FontName("Arial")
+Gui.F_Insp_Sheet.cmdSave.FontSize(8)
+Gui.F_Insp_Sheet.cmdSave.TabStop(True)
+Gui.F_Insp_Sheet.cmdSave.TabIndex(44)
+Gui.F_Insp_Sheet.cmdSave.Tooltip("")
+Gui.F_Insp_Sheet.cmdSave.ControlGroup(0)
+Gui.F_Insp_Sheet.cmdSave.DefaultValue("")
+
+
+Gui.F_Insp_Sheet.cmdClear.Create(button)
+Gui.F_Insp_Sheet.cmdClear.Caption("Clear")
+Gui.F_Insp_Sheet.cmdClear.Visible(True)
+Gui.F_Insp_Sheet.cmdClear.Size(855,375)
+Gui.F_Insp_Sheet.cmdClear.Zorder(0)
+Gui.F_Insp_Sheet.cmdClear.Position(1250,7845)
+Gui.F_Insp_Sheet.cmdClear.Enabled(True)
+Gui.F_Insp_Sheet.cmdClear.FontName("Arial")
+Gui.F_Insp_Sheet.cmdClear.FontSize(8)
+Gui.F_Insp_Sheet.cmdClear.TabStop(True)
+Gui.F_Insp_Sheet.cmdClear.TabIndex(45)
+Gui.F_Insp_Sheet.cmdClear.Tooltip("")
+Gui.F_Insp_Sheet.cmdClear.ControlGroup(0)
+Gui.F_Insp_Sheet.cmdClear.DefaultValue("")
+
+
+Gui.F_Part..Create
+Gui.F_Part..Caption("Part/Sequence Selection")
+Gui.F_Part..Size(5100,1710)
+Gui.F_Part..Position(0,0)
+Gui.F_Part..AlwaysOnTop(False)
+Gui.F_Part..FontName("Arial")
+Gui.F_Part..FontSize(8)
+Gui.F_Part..ForeColor(0)
+Gui.F_Part..Backcolor(-2147483633)
+Gui.F_Part..ControlBox(True)
+Gui.F_Part..MaxButton(True)
+Gui.F_Part..MinButton(True)
+Gui.F_Part..MousePointer(0)
+Gui.F_Part..Moveable(True)
+Gui.F_Part..Sizeable(True)
+Gui.F_Part..ShowInTaskBar(True)
+Gui.F_Part..TitleBar(True)
+
+Gui.F_Part..Event(unload,ProgEnd)
+
+Gui.F_Part.lblPt.Create(label)
+Gui.F_Part.lblPt.Caption("Part Number")
+Gui.F_Part.lblPt.Visible(True)
+Gui.F_Part.lblPt.Size(1035,255)
+Gui.F_Part.lblPt.Zorder(0)
+Gui.F_Part.lblPt.Position(200,110)
+Gui.F_Part.lblPt.Enabled(True)
+Gui.F_Part.lblPt.Alignment(0)
+Gui.F_Part.lblPt.FontName("Arial")
+Gui.F_Part.lblPt.FontSize(8)
+Gui.F_Part.lblPt.Backcolor(-2147483633)
+Gui.F_Part.lblPt.BackStyle(0)
+Gui.F_Part.lblPt.Tooltip("")
+Gui.F_Part.lblPt.ControlGroup(0)
+
+
+Gui.F_Part.lblSeq.Create(label)
+Gui.F_Part.lblSeq.Caption("Sequence")
+Gui.F_Part.lblSeq.Visible(True)
+Gui.F_Part.lblSeq.Size(840,255)
+Gui.F_Part.lblSeq.Zorder(0)
+Gui.F_Part.lblSeq.Position(3340,85)
+Gui.F_Part.lblSeq.Enabled(True)
+Gui.F_Part.lblSeq.Alignment(0)
+Gui.F_Part.lblSeq.FontName("Arial")
+Gui.F_Part.lblSeq.FontSize(8)
+Gui.F_Part.lblSeq.Backcolor(-2147483633)
+Gui.F_Part.lblSeq.BackStyle(0)
+Gui.F_Part.lblSeq.Tooltip("")
+Gui.F_Part.lblSeq.ControlGroup(0)
+
+
+Gui.F_Part.txtPart.Create(textbox)
+Gui.F_Part.txtPart.Text("")
+Gui.F_Part.txtPart.Visible(True)
+Gui.F_Part.txtPart.Size(2550,300)
+Gui.F_Part.txtPart.Zorder(0)
+Gui.F_Part.txtPart.Position(155,325)
+Gui.F_Part.txtPart.Enabled(True)
+Gui.F_Part.txtPart.Alignment(0)
+Gui.F_Part.txtPart.FontName("Arial")
+Gui.F_Part.txtPart.FontSize(8)
+Gui.F_Part.txtPart.Backcolor(-2147483643)
+Gui.F_Part.txtPart.BorderStyle(1)
+Gui.F_Part.txtPart.TabStop(True)
+Gui.F_Part.txtPart.TabIndex(2)
+Gui.F_Part.txtPart.Tooltip("")
+Gui.F_Part.txtPart.ControlGroup(0)
+Gui.F_Part.txtPart.DefaultValue("")
+
+
+Gui.F_Part.cmdPtBrwsr.Create(button)
+Gui.F_Part.cmdPtBrwsr.Caption("^")
+Gui.F_Part.cmdPtBrwsr.Visible(True)
+Gui.F_Part.cmdPtBrwsr.Size(525,375)
+Gui.F_Part.cmdPtBrwsr.Zorder(0)
+Gui.F_Part.cmdPtBrwsr.Position(2700,300)
+Gui.F_Part.cmdPtBrwsr.Enabled(True)
+Gui.F_Part.cmdPtBrwsr.FontName("Arial")
+Gui.F_Part.cmdPtBrwsr.FontSize(8)
+Gui.F_Part.cmdPtBrwsr.TabStop(True)
+Gui.F_Part.cmdPtBrwsr.TabIndex(3)
+Gui.F_Part.cmdPtBrwsr.Tooltip("")
+Gui.F_Part.cmdPtBrwsr.ControlGroup(0)
+Gui.F_Part.cmdPtBrwsr.DefaultValue("")
+
+Gui.F_Part.cmdPtBrwsr.Event(click,Part_Seq_Browser)
+
+Gui.F_Part.cboSeq.Create(combobox)
+Gui.F_Part.cboSeq.Text("")
+Gui.F_Part.cboSeq.Visible(True)
+Gui.F_Part.cboSeq.Size(1290,330)
+Gui.F_Part.cboSeq.Zorder(0)
+Gui.F_Part.cboSeq.Position(3345,4)
+Gui.F_Part.cboSeq.Enabled(True)
+Gui.F_Part.cboSeq.FontName("Arial")
+Gui.F_Part.cboSeq.FontSize(8)
+Gui.F_Part.cboSeq.TabStop(True)
+Gui.F_Part.cboSeq.TabIndex(4)
+Gui.F_Part.cboSeq.Tooltip("")
+Gui.F_Part.cboSeq.ControlGroup(0)
+Gui.F_Part.cboSeq.DefaultValue("")
+
+
+Gui.F_Part.cmdSel.Create(button)
+Gui.F_Part.cmdSel.Caption("Select")
+Gui.F_Part.cmdSel.Visible(True)
+Gui.F_Part.cmdSel.Size(855,375)
+Gui.F_Part.cmdSel.Zorder(0)
+Gui.F_Part.cmdSel.Position(160,700)
+Gui.F_Part.cmdSel.Enabled(True)
+Gui.F_Part.cmdSel.FontName("Arial")
+Gui.F_Part.cmdSel.FontSize(8)
+Gui.F_Part.cmdSel.TabStop(True)
+Gui.F_Part.cmdSel.TabIndex(5)
+Gui.F_Part.cmdSel.Tooltip("")
+Gui.F_Part.cmdSel.ControlGroup(0)
+Gui.F_Part.cmdSel.DefaultValue("")
+
+Gui.F_Part.cmdSel.Event(click,Select_Part)
+
+Gui.F_New..Create
+Gui.F_New..Caption("Select New or Existing")
+Gui.F_New..Size(9150,7230)
+Gui.F_New..Position(0,0)
+Gui.F_New..AlwaysOnTop(True)
+Gui.F_New..FontName("Arial")
+Gui.F_New..FontSize(8)
+Gui.F_New..ForeColor(0)
+Gui.F_New..Backcolor(-2147483633)
+Gui.F_New..ControlBox(True)
+Gui.F_New..MaxButton(False)
+Gui.F_New..MinButton(False)
+Gui.F_New..MousePointer(0)
+Gui.F_New..Moveable(True)
+Gui.F_New..Sizeable(False)
+Gui.F_New..ShowInTaskBar(False)
+Gui.F_New..TitleBar(True)
+
+Gui.F_New..Event(unload,ProgEnd)
+
+Gui.F_New.optNew.Create(option)
+Gui.F_New.optNew.Caption("Use Template")
+Gui.F_New.optNew.Visible(True)
+Gui.F_New.optNew.Size(1575,255)
+Gui.F_New.optNew.Zorder(0)
+Gui.F_New.optNew.Position(200,200)
+Gui.F_New.optNew.Enabled(True)
+Gui.F_New.optNew.Alignment(0)
+Gui.F_New.optNew.FontName("Arial")
+Gui.F_New.optNew.FontSize(8)
+Gui.F_New.optNew.TabStop(False)
+Gui.F_New.optNew.TabIndex(0)
+Gui.F_New.optNew.Tooltip("")
+Gui.F_New.optNew.ControlGroup(0)
+Gui.F_New.optNew.DefaultValue("")
+
+
+Gui.F_New.optCopy.Create(option)
+Gui.F_New.optCopy.Caption("Copy Existing Inspection Sheet")
+Gui.F_New.optCopy.Visible(True)
+Gui.F_New.optCopy.Size(2655,255)
+Gui.F_New.optCopy.Zorder(0)
+Gui.F_New.optCopy.Position(2135,200)
+Gui.F_New.optCopy.Enabled(True)
+Gui.F_New.optCopy.Alignment(0)
+Gui.F_New.optCopy.FontName("Arial")
+Gui.F_New.optCopy.FontSize(8)
+Gui.F_New.optCopy.TabStop(False)
+Gui.F_New.optCopy.TabIndex(1)
+Gui.F_New.optCopy.Tooltip("")
+Gui.F_New.optCopy.ControlGroup(0)
+Gui.F_New.optCopy.DefaultValue("")
+
+
+Gui.F_New.cmdSelect.Create(button)
+Gui.F_New.cmdSelect.Caption("Select")
+Gui.F_New.cmdSelect.Visible(True)
+Gui.F_New.cmdSelect.Size(1230,375)
+Gui.F_New.cmdSelect.Zorder(0)
+Gui.F_New.cmdSelect.Position(100,600)
+Gui.F_New.cmdSelect.Enabled(True)
+Gui.F_New.cmdSelect.FontName("Arial")
+Gui.F_New.cmdSelect.FontSize(8)
+Gui.F_New.cmdSelect.TabStop(True)
+Gui.F_New.cmdSelect.TabIndex(2)
+Gui.F_New.cmdSelect.Tooltip("")
+Gui.F_New.cmdSelect.ControlGroup(0)
+Gui.F_New.cmdSelect.DefaultValue("")
+
+Gui.F_New.cmdSelect.Event(click,Select_Create)
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+
+Variable.Global.sJob.Declare(String)
+Variable.Global.sPart.Declare(String)
+Variable.Global.sRev.Declare(String)
+Variable.Global.sCust.Declare(String)
+Variable.Global.sTempCd.Declare(String)
+Variable.Global.sErr.Declare(String)
+Variable.Global.sSuf.Declare(String)
+Variable.Global.sRSeq.Declare(String)
+Variable.Global.sCPart.Declare(String)
+Variable.Global.sCSeq.Declare(String)
+Variable.Global.sTCd.Declare(String)
+Variable.Global.bNew.Declare(Boolean,False)
+Variable.Global.bDel.Declare(Boolean,False)
+Variable.Global.sJT.Declare(String)
+Variable.Global.sRtr.Declare(String)
+Variable.Global.sRtrRev.Declare(String)
+Variable.Global.sRouter.Declare(String)
+Variable.Global.sSourceRev.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'enm
+'Precision Gear
+
+V.Local.sText.Declare(String)
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+F.Intrinsic.Debug.Stop
+'Script 1 WO Maint
+F.Intrinsic.Control.If(V.Caller.Hook,=,16670)
+'F.Intrinsic.Debug.InvokeDebugger
+	V.Global.sCust.Set(V.Passed.000018)
+'	F.Intrinsic.String.RPad(V.Global.sCust," ",6,V.Global.sCust)
+	F.Intrinsic.String.Left(V.Passed.000012,17,V.Global.sPart)
+	V.Global.sJob.Set(V.Passed.000003)
+	V.Global.sSuf.Set(V.Passed.000004)
+	V.Global.sJT.Set(V.Passed.000007)
+	V.Global.sRtr.Set(V.Passed.000006)
+	V.Global.sSourceRev.Set(V.Passed.000028)
+	F.Intrinsic.String.Format(V.Global.sRtr,"                 ",V.Global.sRtr)
+	F.Intrinsic.String.Format(V.Global.sJT,"   ",V.Global.sRtrRev)
+	F.Intrinsic.String.Concat(V.Global.sRtr,V.Global.sRtrRev,V.Global.sRouter)
+	'F.Intrinsic.UI.Msgbox(V.Global.sJT)
+	F.Intrinsic.Control.CallSub(Seq_browser)
+	F.Intrinsic.Control.CallSub(Fill_param)
+'Script 2 on WO Maint
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,16680)
+	V.Global.sCust.Set(V.Passed.000018)
+'	F.Intrinsic.String.RPad(V.Global.sCust," ",6,V.Global.sCust)
+	F.Intrinsic.String.Left(V.Passed.000012,17,V.Global.sPart)
+	V.Global.sJob.Set(V.Passed.000003)
+	V.Global.sSuf.Set(V.Passed.000004)
+	V.Global.sJT.Set(V.Passed.000007)
+	V.Global.sRtr.Set(V.Passed.000006)
+	V.Global.sSourceRev.Set(V.Passed.000028)
+	F.Intrinsic.String.Format(V.Global.sRtr,"                 ",V.Global.sRtr)
+	F.Intrinsic.String.Format(V.Global.sJT,"   ",V.Global.sRtrRev)
+	F.Intrinsic.String.Concat(V.Global.sRtr,V.Global.sRtrRev,V.Global.sRouter)
+	'F.Intrinsic.UI.Msgbox(V.Global.sJT)
+	F.Intrinsic.Control.CallSub(Add_rpt)
+'F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,11410)
+'	F.Intrinsic.Control.CallSub(Fill_param)
+'Print Bar code wo process hook
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,10105)
+	V.Global.sJob.Set(V.Passed.009000)
+	V.Global.sSuf.Set(V.Passed.009001)
+	F.Intrinsic.String.Concat("Job ",V.Passed.009000," Suffix ",V.Passed.009001,V.Local.sText)
+	'F.Intrinsic.UI.Msgbox(V.Local.stext)
+	F.Intrinsic.Control.CallSub(Print_seq)
+F.Intrinsic.Control.Else
+	V.Global.sCust.Set("1047")
+'	F.Intrinsic.String.RPad(V.Global.sCust," ",6,V.Global.sCust)
+	V.Global.sJob.Set("J08117")
+	V.Global.sSuf.Set("")
+	V.Global.sPart.Set("00008B230")
+	V.Global.sJT.Set("183")
+	V.Global.sRtrRev.Set("183")
+	'F.Intrinsic.UI.Msgbox(V.Global.sJT)
+	'V.Global.sSuf.Set(V.Passed.009001)
+'''''''
+	'F.Intrinsic.Control.CallSub(Seq_browser)
+	'F.Intrinsic.Control.CallSub(Fill_param)
+'''''''
+	F.Intrinsic.String.Concat("Job ",V.Global.sJob," Suffix ",V.Global.sSuf,V.Local.sText)
+	F.Intrinsic.Control.CallSub(Print_seq)
+'''''''
+F.Intrinsic.Control.EndIf
+
+
+
+
+Program.Sub.Main.End
+
+Program.Sub.Fill_Param.Start
+V.Local.sSQL.Declare(String)
+V.Local.iCt.Declare(Long)
+V.Local.sIndex.Declare(String)
+V.Local.sCap.Declare(String)
+V.Local.sTCd.Declare(String)
+V.Local.sSeq.Declare(String)
+V.Local.iParam.Declare(Long)
+
+
+Gui.F_Params.lvwParam.ClearItems
+F.Intrinsic.Control.If(V.Global.stCd,=,"")
+	F.Intrinsic.Control.If(V.Global.sCPart,<>,"")
+		F.Intrinsic.String.Concat("Select * from ATG_3338_INSPEC_DB where CustNo='",V.Global.sCust,"' and Part_No='",V.Global.sCPart,"' and Job_Type='",V.Global.sJT,"' and Sequence='",V.Global.sCSeq,"' order by Test desc,Param_Seq",V.Local.sSQL)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Concat("Select * from ATG_3338_INSPEC_DB where CustNo='",V.Global.sCust,"' and Part_No='",V.Global.sPart,"' and Job_Type='",V.Global.sJT,"' and Sequence='",V.Global.sRSeq,"' order by Test desc,Param_Seq",V.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+	'F.Intrinsic.UI.Msgbox(V.Local.sSQL)
+	F.Intrinsic.String.Concat("Part ",V.Global.sPart," Sequence ",V.Global.sRSeq," Inspection Sheet",V.Local.sCap)
+	Gui.F_Params..Caption(V.Local.sCap)
+
+	F.ODBC.Connection!con.OpenRecordsetRO("rstP",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.con!rstP.EOF,=,True)
+'		Gui.F_New..Show
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	V.Local.iParam.Set(V.ODBC.con!rstP.FieldVal!Param_Seq)
+	F.Intrinsic.Control.DoUntil(V.ODBC.con!rstP.EOF,=,True)
+		'F.Intrinsic.Debug.Stop
+
+		'F.Intrinsic.Control.For(V.Local.iCt,0,19,1)
+			'there are 20 fields for the Inspection sheet, so I need to see if there are any for all of the records.
+			'F.Intrinsic.Control.If(V.ODBC.con!rstP.FieldVal!Param_Seq,=,V.Local.iCt)
+				F.Intrinsic.String.Concat(V.ODBC.con!rstP.FieldVal!Part_No,"!*!",V.ODBC.con!rstP.FieldVal!Param_Seq,V.Local.sIndex)
+				'fill listview with paramters for the current part/rev/customer combo
+				Gui.F_Params.lvwParam.AddListItem(V.Local.sIndex,V.ODBC.con!rstP.FieldVal!Insp_Param)
+				F.Intrinsic.Control.If(V.ODBC.con!rstP.FieldVal!Test,=,"Y")
+					Gui.F_Params.lvwParam.SetListItemSubItemText(V.Local.sIndex,1,V.ODBC.con!rstP.FieldVal!Param_Value)
+				F.Intrinsic.Control.EndIf
+				Gui.F_Params.lvwParam.SetListItemSubItemText(V.Local.sIndex,2,V.ODBC.con!rstP.FieldVal!Test)
+			'F.Intrinsic.Control.EndIf
+		'F.Intrinsic.Control.Next(V.Local.iCt)
+		F.ODBC.con!rstP.MoveNext
+	F.Intrinsic.Control.Loop
+	F.ODBC.con!rstP.Close
+F.Intrinsic.Control.Else
+	'V.Local.sTCd.Set(V.args.sTC)
+	'
+	'F.Intrinsic.UI.Msgbox(V.Global.sTCd)
+	F.Intrinsic.String.Concat("Select * from ATG_Insp_Template where Template_code='",V.Global.sTCd,"' order by Param_Seq",V.Local.sSQL)
+	F.ODBC.Connection!con.OpenRecordsetRO("rstTemp",V.Local.sSQL)
+	F.Intrinsic.UI.Inputbox("Please enter Sequence Number","Sequence","",V.Local.sSeq)
+	F.Intrinsic.String.Format(V.Local.sSeq,"000000",V.Local.sSeq)
+	Gui.F_Params.txtSeq.Text(V.Local.sSeq)
+	F.Intrinsic.Control.DoUntil(V.ODBC.con!rstTemp.EOF,=,True)
+		
+		F.Intrinsic.String.Concat(V.Global.sPart,"!*!",V.ODBC.con!rstTemp.FieldVal!Param_Seq,V.Local.sIndex)
+		'fill listview with paramters for the current part/rev/customer combo
+		Gui.F_Params.lvwParam.AddListItem(V.Local.sIndex,V.ODBC.con!rstTemp.FieldVal!Insp_Param)
+		'F.Intrinsic.Control.If(V.ODBC.con!rstP.FieldVal!Test,=,"Y")
+		'	Gui.F_Params.lvwParam.SetListItemSubItemText(V.Local.sIndex,1,V.ODBC.con!rstP.FieldVal!Param_Value)
+		'F.Intrinsic.Control.EndIf
+		Gui.F_Params.lvwParam.SetListItemSubItemText(V.Local.sIndex,2,V.ODBC.con!rstTemp.FieldVal!Test)
+		F.ODBC.Connection!con.OpenRecordsetRW("rstST","ATG_3338_INSPEC_DB")
+		F.ODBC.con!rstST.AddNew
+		F.ODBC.con!rstST.Set!CustNo(V.Global.sCust)
+		F.ODBC.con!rstST.Set!Part_No(V.Global.sPart)
+		'F.ODBC.con!rstST.Set!Part_Rev(V.ODBC.con!rstTemp.FieldVal!Part_Rev)
+		F.ODBC.con!rstST.Set!Part_Rev(" ")
+		F.ODBC.con!rstST.Set!Sequence(V.Local.sSeq)
+		F.ODBC.con!rstST.Set!Param_Seq(V.ODBC.con!rstTemp.FieldVal!Param_Seq)
+		F.ODBC.con!rstST.Set!Insp_Param(V.ODBC.con!rstTemp.FieldVal!Insp_Param)
+		F.ODBC.con!rstST.Set!Param_Value("")
+		F.ODBC.con!rstST.Set!Test(V.ODBC.con!rstTemp.FieldVal!Test)
+		F.ODBC.con!rstST.Set!Template_Code(V.ODBC.con!rstTemp.FieldVal!Template_Code)
+		F.ODBC.con!rstST.Set!Template_Desc(V.ODBC.con!rstTemp.FieldVal!Template_Desc)
+		F.ODBC.con!rstST.Set!Template_Rpt_ID(V.ODBC.con!rstTemp.FieldVal!Template_Rpt_ID)
+		F.ODBC.con!rstST.Set!ISO_Text(V.ODBC.con!rstTemp.FieldVal!ISO_Text)
+		F.ODBC.con!rstST.Set!Job_Type(V.Global.sJT)
+		F.ODBC.con!rstST.Update
+		F.ODBC.con!rstST.Close
+		F.ODBC.con!rstTemp.MoveNext
+	F.Intrinsic.Control.Loop
+	F.ODBC.con!rstTemp.Close
+	V.Global.bNew.Set(False)
+	Gui.F_New..Visible(false)
+F.Intrinsic.Control.EndIf
+Gui.F_Params..Show
+
+Program.Sub.Fill_Param.End
+
+Program.Sub.ProgEnd.Start
+F.ODBC.Connection!con.Close
+F.Intrinsic.Control.End
+
+Program.Sub.ProgEnd.End
+
+program.sub.lvwparam_click.start
+'
+'F.Intrinsic.UI.Msgbox(V.Screen.F_Params!txtKey.Text)
+Gui.F_Params.txtKey.Text(V.Screen.F_Params!lvwParam.SelectedItemKey)
+Gui.F_Params.txtPDesc.Text(V.Screen.F_Params!lvwParam.SelectedItemText)
+Gui.F_Params.txtPVal.Text(V.Screen.F_Params!lvwParam.SelectedItemSubItem(1))
+Gui.F_Params.txtTReq.Text(V.Screen.F_Params!lvwParam.SelectedItemSubItem(2))
+
+program.sub.lvwparam_click.end
+
+Program.Sub.Param_Buttons.Start
+V.Local.sSeq.Declare(String)
+V.Local.sKey.Declare(String)
+V.Local.sSQL.Declare(String)
+'save
+'
+F.Intrinsic.Control.If(V.Screen.F_Params!cmdSDN0.Value,=,True)
+	F.Intrinsic.Control.CallSub(Save_param)
+'delete
+F.Intrinsic.Control.ElseIf(V.Screen.F_Params!cmdSDN1.Value,=,True)
+	Gui.F_Params.lvwParam.RemoveItem(V.Screen.F_Params!txtKey.Text)
+	F.Intrinsic.String.Split(V.Screen.F_Params!txtKey.Text,"!*!",V.Local.sKey)
+	V.Local.sSeq.Set(V.Local.sKey(1))
+	F.Intrinsic.String.Concat("Delete from ATG_3338_INSPEC_DB where Part_No='",V.Global.sPart,"' and Job_Type='",V.Global.sJT,"' and CustNo='",V.Global.sCust,"' and Param_seq='",V.Local.sSeq,"'",V.Local.sSQL)
+	F.ODBC.Connection!con.Execute(V.Local.sSQL)
+'Add New
+F.Intrinsic.Control.Elseif(V.Screen.F_Params!cmdSDN2.Value,=,True)
+	F.Intrinsic.Control.CallSub(Clear_param)
+	V.Global.bNew.Set(True)
+'Copy
+F.Intrinsic.Control.Elseif(V.Screen.F_Params!cmdSDN3.Value,=,True)
+	Gui.F_Part..Show
+'Del Seq
+F.Intrinsic.Control.ElseIf(V.Screen.F_Params!cmdDelS.Value,=,True)
+	'V.Global.bDel.Set(True)
+	F.Intrinsic.Control.CallSub(Del_seq)
+F.Intrinsic.Control.ElseIf(V.Screen.F_Params!cmdSDN4.Value,=,True)
+	F.Intrinsic.Control.CallSub(Clear_param)
+	F.Intrinsic.Control.CallSub(Seq_browser)
+	F.Intrinsic.Control.CallSub(Fill_param)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Param_Buttons.End
+
+Program.Sub.Clear_Param.Start
+Gui.F_Params.txtKey.Text("")
+Gui.F_Params.txtPDesc.Text("")
+Gui.F_Params.txtPVal.Text("")
+Gui.F_Params.txtTReq.Text("Y")
+
+Program.Sub.Clear_Param.End
+
+Program.Sub.Save_Param.Start
+V.Local.sSQL.Declare(String)
+V.Local.sKey.Declare(String)
+V.Local.sSeq.Declare(String)
+V.Local.iSeq.Declare(Long)
+
+F.Intrinsic.Control.SetErrorHandler("ErrHdl")
+F.Intrinsic.Control.ClearErrors
+'
+F.Intrinsic.Control.If(V.Screen.F_Params!txtPDesc.Text,=,"")
+	F.Intrinsic.UI.Msgbox("Data has not been entered for Parameter Sequence.")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+'Existing Line
+F.Intrinsic.Debug.Stop
+F.Intrinsic.Control.If(V.Global.bNew,=,False)
+'F.Intrinsic.Control.If(V.Screen.F_Params!txtKey.Text,<>,"")
+	'F.Intrinsic.UI.Msgbox("Existing Line")
+	V.Global.sErr.Set("Get Sequence for Existing Line Save")
+	F.Intrinsic.String.Split(V.Screen.F_Params!txtKey.Text,"!*!",V.Local.sKey)
+	V.Local.sSeq.Set(V.Local.sKey(1))
+	V.Global.sErr.Set("Write changes back to screen for existing parameter")
+	Gui.F_Params.lvwParam.SetListItemSubItemText(V.Screen.F_Params!txtKey.Text,1,V.Screen.F_Params!txtPVal.Text)
+	Gui.F_Params.lvwParam.SetListItemSubItemText(V.Screen.F_Params!txtKey.Text,2,V.Screen.F_Params!txtTReq.Text)
+	V.Global.sErr.Set("Update DB with changes to Paramter for existing")
+	F.Intrinsic.String.Concat("Update ATG_3338_INSPEC_DB set Insp_Param='",V.Screen.F_Params!txtPDesc.Text,"' , Param_Value='",V.Screen.F_Params!txtPVal.Text,"', Test='",V.Screen.F_Params!txtTReq.Text,"' where Part_No='",V.Global.sPart,"' and Part_Rev='",V.Global.sJT,"' and CustNo='",V.Global.sCust,"' and Param_Seq='",V.Local.sSeq,"'",V.Local.sSQL)
+	F.ODBC.Connection!con.Execute(V.Local.sSQL)
+'New Sequence
+F.Intrinsic.Control.Else
+	'F.Intrinsic.UI.Msgbox("New Sequence")
+	V.Global.sErr.Set("Get New Seq for Parameter if Add New is selected")
+	'F.Intrinsic.UI.Msgbox(V.Screen.F_Params!txtSeq.Text)
+	F.Intrinsic.String.Concat("Select top 1 Param_Seq from ATG_3338_INSPEC_DB where Part_No='",V.Global.sPart,"' and Part_Rev='",V.Global.sJT,"' and CustNo='",V.Global.sCust,"' and Sequence='",V.Screen.F_Params!txtSeq.Text,"' order by Param_Seq Desc",V.Local.sSQL)
+	'F.Intrinsic.UI.Msgbox(V.Local.sSQL)
+	F.ODBC.Connection!con.OpenRecordsetRO("rstLU",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.con!rstLU.EOF,=,False)
+		'F.Intrinsic.String.Split(V.Screen.F_Params!txtKey.Text,"!*!",V.Local.sKey)
+		'V.Local.sSeq.Set(V.Local.sKey(1))
+		'F.Intrinsic.Control.If(V.Local.sSeq,=,"")
+			'F.Intrinsic.UI.Msgbox(V.ODBC.con!rstLU.FieldVal!Param_Seq)
+			F.Intrinsic.Math.Add(V.ODBC.con!rstLU.FieldValLong!Param_Seq,1,V.Local.iSeq)
+			V.Local.sSeq.Set(V.Local.iSeq)
+		'F.Intrinsic.Control.EndIf
+		'F.Intrinsic.Debug.Stop
+		'F.Intrinsic.String.Format(V.Local.iSeq,"000000",V.Local.sSeq)
+		F.Intrinsic.String.Concat(V.Global.sPart,"!*!",V.Local.sSeq,V.Local.sKey)
+		'F.ODBC.Connection!con.OpenRecordsetRW("rstSeq","ATG_3338_INSPEC_DB")
+		'F.ODBC.con!rstSeq.AddNew
+'		Gui.F_Params.lvwParam.AddListItem(V.Local.sKey,V.ODBC.con!rstP.FieldVal!Insp_Param)
+		Gui.F_Params.lvwParam.AddListItem(V.Local.sKey,V.Screen.F_Params!txtPDesc.Text)
+'		Gui.F_Params.lvwParam.SetListItemSubItemText(V.Local.sKey,1,V.ODBC.con!rstP.FieldVal!Param_Value)
+		Gui.F_Params.lvwParam.SetListItemSubItemText(V.Local.sKey,1,V.Screen.F_Params!txtPVal.Text)
+'		Gui.F_Params.lvwParam.SetListItemSubItemText(V.Local.sKey,2,V.ODBC.con!rstP.FieldVal!Test)
+		Gui.F_Params.lvwParam.SetListItemSubItemText(V.Local.sKey,2,V.Screen.F_Params!txtTReq.Text)
+		'add code to lookup existing information and add new line to the database record for this inspection sheet.
+		F.Intrinsic.String.Concat("Select * from ATG_3338_INSPEC_DB where Part_No='",V.Global.sPart,"' and Job_Type='",V.Global.sJT,"' and CustNo='",V.Global.sCust,"' order by Param_Seq",V.Local.sSQL)
+		F.ODBC.Connection!con.OpenRecordsetRO("rstD",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.con!rstD.EOF,=,False)
+			F.ODBC.Connection!con.OpenRecordsetRW("rstNL","ATG_3338_INSPEC_DB")
+			F.ODBC.con!rstNL.AddNew
+			F.ODBC.con!rstNL.Set!CustNo(V.Global.sCust)
+			F.ODBC.con!rstNL.Set!Part_No(V.Global.sPart)
+			F.ODBC.con!rstNL.Set!Part_Rev(V.ODBC.con!rstD.FieldValRTrim!Part_Rev)
+			F.ODBC.con!rstNL.Set!Sequence(V.Screen.F_Params!txtSeq.Text)
+			F.ODBC.con!rstNL.Set!Param_Seq(V.Local.iSeq)
+			F.ODBC.con!rstNL.Set!Insp_Param(V.Screen.F_Params!txtPDesc.Text)
+			F.ODBC.con!rstNL.Set!Param_Value(V.Screen.F_Params!txtPVal.Text)
+			F.ODBC.con!rstNL.Set!Test(V.Screen.F_Params!txtTReq.Text)
+			F.ODBC.con!rstNL.Set!Template_Code(V.ODBC.con!rstD.FieldVal!Template_Code)
+			F.ODBC.con!rstNL.Set!Template_Desc(V.ODBC.con!rstD.FieldVal!Template_Desc)
+			F.ODBC.con!rstNL.Set!ISO_Text(V.ODBC.con!rstD.FieldVal!ISO_Text)
+			F.ODBC.con!rstNL.Set!Job_Type(V.Global.sJT)
+			F.ODBC.con!rstNL.Update
+			F.ODBC.con!rstNL.Close
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Concat(V.Global.sPart,"!*!0",V.Local.sKey)
+		'F.ODBC.Connection!con.OpenRecordsetRW("rstSeq","ATG_3338_INSPEC_DB")
+		'F.ODBC.con!rstSeq.AddNew
+		Gui.F_Params.lvwParam.AddListItem(V.Local.sKey,V.ODBC.con!rstP.FieldVal!Insp_Param)
+		Gui.F_Params.lvwParam.SetListItemSubItemText(V.Local.sKey,1,V.ODBC.con!rstP.FieldVal!Param_Value)
+		Gui.F_Params.lvwParam.SetListItemSubItemText(V.Local.sKey,2,V.ODBC.con!rstP.FieldVal!Test)
+		'add code to lookup existing information and add new line to the database record for this inspection sheet.
+		F.Intrinsic.String.Concat("Select * from ATG_3338_INSPEC_DB where Part_No='",V.Global.sPart,"' and Job_Type='",V.Global.sJT,"' and CustNo='",V.Global.sCust,"' order by Param_Seq",V.Local.sSQL)
+		F.ODBC.Connection!con.OpenRecordsetRO("rstD",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.con!rstD.EOF,=,False)
+			F.ODBC.Connection!con.OpenRecordsetRW("rstNL","ATG_3338_INSPEC_DB")
+			F.ODBC.con!rstNL.AddNew
+			F.ODBC.con!rstNL.Set!CustNo(V.Global.sCust)
+			F.ODBC.con!rstNL.Set!Part_No(V.Global.sPart)
+			F.ODBC.con!rstNL.Set!Part_Rev(V.ODBC.con!rstD.FieldVal!Part_Rev)
+			F.ODBC.con!rstNL.Set!Sequence(V.Screen.F_Params!txtSeq.Text)
+'			F.ODBC.con!rstNL.Set!Sequence(V.ODBC.con!rstD.FieldVal!Sequence)
+			F.ODBC.con!rstNL.Set!Param_Seq(V.Local.iSeq)
+			F.ODBC.con!rstNL.Set!Insp_Param(V.Screen.F_Params!txtPDesc.Text)
+			F.ODBC.con!rstNL.Set!Param_Value(V.Screen.F_Params!txtPVal.Text)
+			F.ODBC.con!rstNL.Set!Test(V.Screen.F_Params!txtTReq.Text)
+			F.ODBC.con!rstNL.Set!Template_Code(V.ODBC.con!rstD.FieldVal!Template_Code)
+			F.ODBC.con!rstNL.Set!Template_Desc(V.ODBC.con!rstD.FieldVal!Template_Desc)
+			F.ODBC.con!rstNL.Set!ISO_Text(V.ODBC.con!rstD.FieldVal!ISO_Text)
+			F.ODBC.con!rstNL.Set!Job_Type(V.Global.sJT)
+			F.ODBC.con!rstNL.Update
+			F.ODBC.con!rstNL.Close
+		F.Intrinsic.Control.Else
+			F.ODBC.Connection!con.OpenRecordsetRW("rstNL","ATG_3338_INSPEC_DB")
+			F.ODBC.con!rstNL.AddNew
+			F.ODBC.con!rstNL.Set!CustNo(V.Global.sCust)
+			F.ODBC.con!rstNL.Set!Part_No(V.Global.sPart)
+			F.ODBC.con!rstNL.Set!Part_Rev(V.ODBC.con!rstD.FieldType!Part_Rev)
+			F.ODBC.con!rstNL.Set!Sequence(V.Screen.F_Params!txtSeq.Text)
+'			F.ODBC.con!rstNL.Set!Sequence(V.ODBC.con!rstD.FieldVal!Sequence)
+			F.ODBC.con!rstNL.Set!Param_Seq(0)
+			F.ODBC.con!rstNL.Set!Insp_Param(V.Screen.F_Params!txtPDesc.Text)
+			F.ODBC.con!rstNL.Set!Param_Value(V.Screen.F_Params!txtPVal.Text)
+			F.ODBC.con!rstNL.Set!Test(V.Screen.F_Params!txtTReq.Text)
+			F.ODBC.con!rstNL.Set!Template_Code(V.ODBC.con!rstD.FieldVal!Template_Code)
+			F.ODBC.con!rstNL.Set!Template_Desc(V.ODBC.con!rstD.FieldVal!Template_Desc)
+			F.ODBC.con!rstNL.Set!ISO_Text(V.ODBC.con!rstD.FieldVal!ISO_Text)
+			F.ODBC.con!rstNL.Set!Job_Type(V.Global.sJT)
+			F.ODBC.con!rstNL.Update
+			F.ODBC.con!rstNL.Close
+
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	F.ODBC.con!rstLU.Close
+	Gui.F_Params.txtKey.Text(V.Local.sKey)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ErrHdl")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+    F.Intrinsic.UI.Msgbox(V.Ambient.ErrorDescription)
+F.Intrinsic.Control.endif
+
+
+
+Program.Sub.Save_Param.End
+
+Program.Sub.Add_Rpt.Start
+F.Intrinsic.Control.If(1,=,2)
+F.ODBC.Connection!con.OpenRecordsetRW("rstBI","Select * from BI_RPT where RPT_ID='006012'")
+
+F.Intrinsic.Control.If(V.Odbc.con!rstBI.EOF,=,True)
+	F.ODBC.con!rstBI.AddNew
+	F.ODBC.con!rstBI.Set!RPT_ID("006012")
+	F.ODBC.con!rstBI.Set!RPT_SEQ("0001")
+	F.ODBC.con!rstBI.Set!DESCRIPTION("Bevel Inspection Sheet")
+	F.ODBC.con!rstBI.Set!CRYSTAL_FILE_NAME("..\busint\SF_Bevel_Inspection_Sheet.rpt")
+	F.ODBC.con!rstBI.Set!ACTIVE_FLAG("Y")
+	F.ODBC.con!rstBI.Set!CREATION_FLAG("G")
+	F.ODBC.con!rstBI.Set!RPT_TYPE("C")
+	F.ODBC.con!rstBI.Set!OUTPUT_OPT("")
+	F.ODBC.con!rstBI.Set!Brtndr_no_exit("")
+	F.ODBC.con!rstBI.Set!Override_Flag("")
+	F.ODBC.con!rstBI.Set!Override_Rpt("")
+	F.ODBC.con!rstBI.Set!Filler1("")
+	F.ODBC.con!rstBI.Update
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rstBI.Close
+
+F.ODBC.Connection!con.OpenRecordsetRW("rstBI","Select * from BI_RPT where RPT_ID='006013'")
+
+F.Intrinsic.Control.If(V.Odbc.con!rstBI.EOF,=,True)
+	F.ODBC.con!rstBI.AddNew
+	F.ODBC.con!rstBI.Set!RPT_ID("006013")
+	F.ODBC.con!rstBI.Set!RPT_SEQ("0001")
+	F.ODBC.con!rstBI.Set!DESCRIPTION("Broach Inspection Sheet")
+	F.ODBC.con!rstBI.Set!CRYSTAL_FILE_NAME("..\busint\SF_Broach_Inspection_Sheet.rpt")
+	F.ODBC.con!rstBI.Set!ACTIVE_FLAG("Y")
+	F.ODBC.con!rstBI.Set!CREATION_FLAG("G")
+	F.ODBC.con!rstBI.Set!RPT_TYPE("C")
+	F.ODBC.con!rstBI.Set!OUTPUT_OPT("")
+	F.ODBC.con!rstBI.Set!Brtndr_no_exit("")
+	F.ODBC.con!rstBI.Set!Override_Flag("")
+	F.ODBC.con!rstBI.Set!Override_Rpt("")
+	F.ODBC.con!rstBI.Set!Filler1("")
+	F.ODBC.con!rstBI.Update
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rstBI.Close
+
+F.ODBC.Connection!con.OpenRecordsetRW("rstBI","Select * from BI_RPT where RPT_ID='006014'")
+
+F.Intrinsic.Control.If(V.Odbc.con!rstBI.EOF,=,True)
+	F.ODBC.con!rstBI.AddNew
+	F.ODBC.con!rstBI.Set!RPT_ID("006014")
+	F.ODBC.con!rstBI.Set!RPT_SEQ("0001")
+	F.ODBC.con!rstBI.Set!DESCRIPTION("External Inspection Sheet")
+	F.ODBC.con!rstBI.Set!CRYSTAL_FILE_NAME("..\busint\SF_External_Inspection_Sheet.rpt")
+	F.ODBC.con!rstBI.Set!ACTIVE_FLAG("Y")
+	F.ODBC.con!rstBI.Set!CREATION_FLAG("G")
+	F.ODBC.con!rstBI.Set!RPT_TYPE("C")
+	F.ODBC.con!rstBI.Set!OUTPUT_OPT("")
+	F.ODBC.con!rstBI.Set!Brtndr_no_exit("")
+	F.ODBC.con!rstBI.Set!Override_Flag("")
+	F.ODBC.con!rstBI.Set!Override_Rpt("")
+	F.ODBC.con!rstBI.Set!Filler1("")
+	F.ODBC.con!rstBI.Update
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rstBI.Close
+
+F.ODBC.Connection!con.OpenRecordsetRW("rstBI","Select * from BI_RPT where RPT_ID='006015'")
+
+F.Intrinsic.Control.If(V.Odbc.con!rstBI.EOF,=,True)
+	F.ODBC.con!rstBI.AddNew
+	F.ODBC.con!rstBI.Set!RPT_ID("006015")
+	F.ODBC.con!rstBI.Set!RPT_SEQ("0001")
+	F.ODBC.con!rstBI.Set!DESCRIPTION("Internal Inspection Sheet")
+	F.ODBC.con!rstBI.Set!CRYSTAL_FILE_NAME("..\busint\SF_Internal_Inspection_Sheet.rpt")
+	F.ODBC.con!rstBI.Set!ACTIVE_FLAG("Y")
+	F.ODBC.con!rstBI.Set!CREATION_FLAG("G")
+	F.ODBC.con!rstBI.Set!RPT_TYPE("C")
+	F.ODBC.con!rstBI.Set!OUTPUT_OPT("")
+	F.ODBC.con!rstBI.Set!Brtndr_no_exit("")
+	F.ODBC.con!rstBI.Set!Override_Flag("")
+	F.ODBC.con!rstBI.Set!Override_Rpt("")
+	F.ODBC.con!rstBI.Set!Filler1("")
+	F.ODBC.con!rstBI.Update
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rstBI.Close
+
+F.ODBC.Connection!con.OpenRecordsetRW("rstBI","Select * from BI_RPT where RPT_ID='006016'")
+
+F.Intrinsic.Control.If(V.Odbc.con!rstBI.EOF,=,True)
+	F.ODBC.con!rstBI.AddNew
+	F.ODBC.con!rstBI.Set!RPT_ID("006016")
+	F.ODBC.con!rstBI.Set!RPT_SEQ("0001")
+	F.ODBC.con!rstBI.Set!DESCRIPTION("Worm Gear Inspection Sheet")
+	F.ODBC.con!rstBI.Set!CRYSTAL_FILE_NAME("..\busint\SF_Worm_Gear_Inspection_Sheet.rpt")
+	F.ODBC.con!rstBI.Set!ACTIVE_FLAG("Y")
+	F.ODBC.con!rstBI.Set!CREATION_FLAG("G")
+	F.ODBC.con!rstBI.Set!RPT_TYPE("C")
+	F.ODBC.con!rstBI.Set!OUTPUT_OPT("")
+	F.ODBC.con!rstBI.Set!Brtndr_no_exit("")
+	F.ODBC.con!rstBI.Set!Override_Flag("")
+	F.ODBC.con!rstBI.Set!Override_Rpt("")
+	F.ODBC.con!rstBI.Set!Filler1("")
+	F.ODBC.con!rstBI.Update
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rstBI.Close
+
+F.ODBC.Connection!con.OpenRecordsetRW("rstBI","Select * from BI_RPT where RPT_ID='006017'")
+
+F.Intrinsic.Control.If(V.Odbc.con!rstBI.EOF,=,True)
+	F.ODBC.con!rstBI.AddNew
+	F.ODBC.con!rstBI.Set!RPT_ID("006017")
+	F.ODBC.con!rstBI.Set!RPT_SEQ("0001")
+	F.ODBC.con!rstBI.Set!DESCRIPTION("Worm Inspection Sheet")
+	F.ODBC.con!rstBI.Set!CRYSTAL_FILE_NAME("..\busint\SF_Worm_Inspection_Sheet.rpt")
+	F.ODBC.con!rstBI.Set!ACTIVE_FLAG("Y")
+	F.ODBC.con!rstBI.Set!CREATION_FLAG("G")
+	F.ODBC.con!rstBI.Set!RPT_TYPE("C")
+	F.ODBC.con!rstBI.Set!OUTPUT_OPT("")
+	F.ODBC.con!rstBI.Set!Brtndr_no_exit("")
+	F.ODBC.con!rstBI.Set!Override_Flag("")
+	F.ODBC.con!rstBI.Set!Override_Rpt("")
+	F.ODBC.con!rstBI.Set!Filler1("")
+	F.ODBC.con!rstBI.Update
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rstBI.Close
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CallSub(Print_report)
+
+Program.Sub.Add_Rpt.End
+
+Program.Sub.Print_Report.Start
+V.Local.sName.Declare(String)
+V.Local.sRpt.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sParamN.Declare(String)
+V.Local.sParamV.Declare(String)
+V.Local.iPos.Declare(Long)
+
+F.Intrinsic.Control.If(V.Global.sCust,=,"")
+	F.Intrinsic.String.Concat("Select Part,Customer from V_Job_Header where Job='",V.Global.sJob,"' and Suffix='",V.Global.sSuf,"'",V.Local.sSQL)
+	F.ODBC.Connection!con.OpenRecordsetRO("rstJob",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.con!rstJob.EOF,=,False)
+		V.Global.sCust.Set(V.ODBC.con!rstJob.FieldVal!Customer)
+		V.Global.sPart.Set(V.ODBC.con!rstJob.FieldVal!Part)
+		V.Global.sRev.Set(V.Global.sSourceRev)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Instr(V.Global.sJob,"-",V.Local.iPos)
+F.Intrinsic.Control.If(V.Local.iPos,=,0)
+'F.Intrinsic.Control.If(V.Global.sSuf,<>,"")
+	F.Intrinsic.String.Concat(V.Global.sJob," - ",V.Global.sSuf,V.Global.sJob)
+F.Intrinsic.Control.EndIf
+'F.Intrinsic.Control.If(V.Global.sRSeq,=,"")
+	F.Intrinsic.Control.CallSub(Seq_browser)
+'F.Intrinsic.Control.EndIf
+V.Local.sParamN.Set("PART*!*CUSTOMER*!*JOB*!*SEQUENCE*!*JobType")
+F.Intrinsic.String.Split(V.Local.sParamN,"*!*",V.Local.sParamN)
+'F.Intrinsic.UI.Msgbox(V.Global.sRSeq)
+F.Intrinsic.String.Concat(V.Global.sPart,"*!*",V.Global.sCust,"*!*",V.Global.sJob,"*!*",V.Global.sRSeq,"*!*",V.Global.sJT,V.Local.sParamV)
+'F.Intrinsic.UI.Msgbox(V.Local.sParamN)
+'F.Intrinsic.UI.Msgbox(V.Local.sParamV)
+F.Intrinsic.String.Split(V.Local.sParamV,"*!*",V.Local.sParamV)
+'F.Intrinsic.UI.Msgbox(V.Global.sCust)
+F.Intrinsic.Debug.Stop
+F.Intrinsic.Control.If("hook",=,10105)
+
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Concat("Select Distinct Sequence,Job_Type,Part_Rev,Template_Rpt_ID from ATG_3338_INSPEC_DB where Part_No='",V.Global.sPart,"' and Job_Type='",V.Global.sJT,"' and CustNo='",V.Global.sCust,"'  and Sequence='",V.Global.sRSeq,"' order by Param_Seq asc",V.Local.sSQL)
+F.ODBC.Connection!con.OpenRecordsetRO("rstRpt",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.con!rstRpt.EOF,=,False)
+	'F.Intrinsic.UI.Msgbox(V.ODBC.con!rstRpt.FieldVal!Template_Rpt_ID)
+	Function.Global.BI.PrintReport(V.ODBC.con!rstRpt.FieldVal!Template_Rpt_ID,0,V.Local.sParamN,V.Local.sParamV)
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rstRpt.Close
+
+Program.Sub.Print_Report.End
+
+Program.Sub.Seq_Browser.Start
+V.Local.sLoc.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sPartSelect.Declare(String)
+V.Local.sText.Declare(String)
+V.Local.sUser.Declare(String)
+
+V.Local.sUser.Set(V.Caller.User)
+'V.Local.sLoc.Set(V.COBOLConfig.OELoc)
+'V.Passed.777777.Set(1)
+'
+'Gui.F_Params.lvwParam.ClearItems
+'F.Intrinsic.UI.Msgbox("Made it to the Seq Browser")
+F.Intrinsic.String.Split("Part Number*!*Sequence","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("2500*!*1500","*!*",V.Local.iWidths)
+F.Intrinsic.String.Concat("Part No ",V.Global.sPart," CustNo ",V.Global.sCust,V.Local.sText)
+F.Intrinsic.String.Left(V.Global.sPart,17,V.Global.sPart)
+'F.Intrinsic.UI.Msgbox(V.Local.sText)
+F.Intrinsic.String.Concat("Select distinct PART_No, Sequence from ATG_3338_INSPEC_DB where Part_No='",V.Global.sPart,"' and CustNo='",V.Global.sCust,"' and Job_Type='",V.Global.sJT,"' order by Sequence","",V.Local.sSQL)
+'F.Intrinsic.UI.Msgbox(V.Local.sSQL)
+F.Intrinsic.UI.MiniBrowser("Select Sequence","con",V.Local.sSQL,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,"<>","***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sPartSelect)
+	V.Global.sRSeq.Set(V.Local.sPartSelect(1))
+	Gui.F_Params.txtSeq.Text(V.Global.sRSeq)
+	'V.Global.sJT.Set(V.Local.sPartSelect(2))
+	Gui.F_Params..Visible(true)
+	'
+	F.Intrinsic.Control.If(V.Local.sPartSelect(0),=,"")
+		Gui.F_New..Show
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ElseIf(V.Local.sRet,"=","***CANCEL***")
+	'F.Intrinsic.UI.Msgbox("This is the new seq")
+	Gui.F_New..Show
+F.Intrinsic.Control.Else
+	Gui.F_New..Show
+	'F.Intrinsic.Control.CallSub(Progend)
+F.Intrinsic.Control.EndIf
+
+
+Program.Sub.Seq_Browser.End
+
+Program.Sub.Part_Seq_Browser.Start
+'V.Local.sLoc.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sPartSelect.Declare(String)
+
+'V.Local.sUser.Declare(String)
+
+'V.Local.sUser.Set(V.Caller.User)
+'V.Local.sLoc.Set(V.COBOLConfig.OELoc)
+'V.Passed.777777.Set(1)
+'
+F.Intrinsic.String.Split("Part Number*!*Sequence","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("2500*!*1500","*!*",V.Local.iWidths)
+F.Intrinsic.String.Concat("Select distinct PART_No, Sequence,Part_Rev from ATG_3338_INSPEC_DB where CustNo='",V.Global.sCust,"' order by Part_No,Sequence","",V.Local.sSQL)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.MiniBrowser("Select Sequence","con",V.Local.sSQL,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,"<>","***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sPartSelect)
+	V.Global.sCPart.Set(V.Local.sPartSelect(0))
+	V.Global.sCSeq.Set(V.Local.sPartSelect(1))
+	'V.Global.sRev.Set(V.Local.sPartSelect(2))
+	Gui.F_Part.txtPart.Text(V.Global.sCPart)
+	Gui.F_Part.cboSeq.Text(V.Global.sCSeq)
+F.Intrinsic.Control.ElseIf(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.Control.CallSub(Progend)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Part_Seq_Browser.End
+
+Program.Sub.Select_Part.Start
+Gui.F_Part..Show(False)
+Gui.F_Params.lvwParam.ClearItems
+
+F.Intrinsic.Control.CallSub(Fill_param)
+F.Intrinsic.Control.CallSub(Clear_param)
+
+Program.Sub.Part_Seq_Browser.End
+
+Program.Sub.Insp_Bowser.Start
+V.Local.sLoc.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sPartSelect.Declare(String)
+
+'V.Local.sUser.Declare(String)
+
+'V.Local.sUser.Set(V.Caller.User)
+'V.Local.sLoc.Set(V.COBOLConfig.OELoc)
+'V.Passed.777777.Set(1)
+'Gui.F_New..Enabled(false)
+'
+F.Intrinsic.String.Split("Template_Code*!*Template_Desc*!*TempID","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1000*!*2500*!*0","*!*",V.Local.iWidths)
+V.Local.sSQL.Set("Select distinct Template_Code,Template_Desc,TempID from ATG_Insp_Template order by Template_Desc")
+F.Intrinsic.UI.MiniBrowser("Select Inspection Template","con",V.Local.sSQL,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,"<>","***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sPartSelect)
+'	V.Global.sRSeq.Set(V.Local.sPartSelect(2))
+	V.Global.sTCd.Set(V.Local.sPartSelect(0))
+'	F.Intrinsic.Variable.AddPV("sTC",V.Local.sPartSelect(0))
+F.Intrinsic.Control.ElseIf(V.Local.sRet,"=","***CANCEL***")
+	'F.Intrinsic.Control.CallSub(Progend)
+F.Intrinsic.Control.EndIf
+
+'Gui.F_Params..Show
+
+Program.Sub.Insp_Bowser.End
+
+Program.Sub.Select_Create.Start
+'
+F.Intrinsic.Control.If(V.Screen.F_New!optNew.Value,=,True)
+	F.Intrinsic.Control.CallSub(Insp_bowser)
+F.Intrinsic.Control.Else
+	Gui.F_Part..Show
+F.Intrinsic.Control.EndIf
+'Gui.F_New..Visible(false)
+V.Global.bNew.Set(True)
+F.Intrinsic.Control.CallSub(Fill_param)
+
+Program.Sub.Select_Create.End
+
+Program.Sub.Format_Seq.Start
+V.Local.sSeq.Declare(String)
+
+F.Intrinsic.String.Format(V.Screen.F_Params!txtSeq.Text,"000000",V.Local.sSeq)
+Gui.F_Params.txtSeq.Text(V.Local.sSeq)
+Gui.F_Params.txtPDesc.SetFocus
+
+Program.Sub.Format_Seq.End
+
+Program.Sub.Del_Seq.Start
+V.Local.sLoc.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sPartSelect.Declare(String)
+
+F.Intrinsic.String.Split("Part Number*!*Sequence*!*Job Type","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("2500*!*1500*!*1500","*!*",V.Local.iWidths)
+F.Intrinsic.String.Concat("Select distinct PART_No, Sequence,Job_Type from ATG_3338_INSPEC_DB where Part_No='",V.Global.sPart,"' and CustNo='",V.Global.sCust,"' order by Sequence","",V.Local.sSQL)
+F.Intrinsic.UI.MiniBrowser("Select Sequence","con",V.Local.sSQL,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,"<>","***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sPartSelect)
+	F.Intrinsic.String.Concat("Delete from ATG_3338_INSPEC_DB where Part_No='",V.Global.sPart,"' and CustNo='",V.Global.sCust,"' and Sequence='",V.Local.sPartSelect(1),"' and Job_Type='",V.Local.sPartSelect(2),"'",V.Local.sSQL)
+	F.ODBC.Connection!con.Execute(V.Local.sSQL)
+	F.Intrinsic.UI.Msgbox("The selected Sequence has been deleted")
+	Gui.F_Params..Visible(true)
+	F.Intrinsic.Control.If(V.Local.sPartSelect(0),=,"")
+		Gui.F_New..Show
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ElseIf(V.Local.sRet,"=","***CANCEL***")
+	Gui.F_Params..Visible(true)
+F.Intrinsic.Control.Else
+	Gui.F_Params..Visible(true)
+F.Intrinsic.Control.EndIf
+
+
+Program.Sub.Del_Seq.End
+
+Program.Sub.Print_Seq.Start
+V.Local.sName.Declare(String)
+V.Local.sRpt.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sParamN.Declare(String)
+V.Local.sParamV.Declare(String)
+V.Local.iPos.Declare(Long)
+
+'F.Intrinsic.UI.Msgbox("In the Print_Seq")
+F.Intrinsic.Debug.Stop
+F.Intrinsic.Control.If(V.Global.sCust,=,"")
+	'F.Intrinsic.UI.Msgbox("no customer")
+	F.Intrinsic.String.Concat("Select Router,Customer from V_Job_Header where Job='",V.Global.sJob,"' and Suffix='",V.Global.sSuf,"'",V.Local.sSQL)
+	F.ODBC.Connection!con.OpenRecordsetRO("rstJob",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.con!rstJob.EOF,=,False)
+		'F.Intrinsic.UI.Msgbox("rstJob.eof=false")
+		V.Global.sCust.Set(V.ODBC.con!rstJob.FieldValTrim!Customer)
+'		V.Global.sPart.Set(V.ODBC.con!rstJob.FieldValTrim!Router)
+		F.Intrinsic.String.Left(V.ODBC.con!rstJob.FieldValrTrim!Router,17,V.Global.sPart)
+		F.Intrinsic.String.RTrim(V.Global.sPart,V.Global.sPart)
+		F.Intrinsic.String.Right(V.ODBC.con!rstJob.FieldValLTrim!Router,3,V.Global.sRtrRev)
+		V.Global.sRev.Set(V.Global.sSourceRev)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("No matching Job_Suffix information")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Instr(V.Global.sJob,"-",V.Local.iPos)
+F.Intrinsic.Control.If(V.Local.iPos,=,0)
+'F.Intrinsic.Control.If(V.Global.sSuf,<>,"")
+	F.Intrinsic.String.Concat(V.Global.sJob," - ",V.Global.sSuf,V.Global.sJob)
+F.Intrinsic.Control.EndIf
+'F.Intrinsic.Control.If(V.Global.sRSeq,=,"")
+	'F.Intrinsic.Control.CallSub(Part_seq_type)
+'F.Intrinsic.Control.EndIf
+V.Local.sParamN.Set("PART*!*CUSTOMER*!*JOB*!*SEQUENCE*!*JobType")
+F.Intrinsic.String.Split(V.Local.sParamN,"*!*",V.Local.sParamN)
+'F.Intrinsic.Control.If("hook",=,10105)
+	'F.Intrinsic.UI.Msgbox("Getting the Report ID")
+	F.Intrinsic.String.Concat("Select Distinct Sequence,Job_Type,Part_Rev,Template_Rpt_ID from ATG_3338_INSPEC_DB where Part_No='",V.Global.sPart,"' and CustNo='",V.Global.sCust,"' and Job_Type='",V.Global.srtrrev,"' order by Part_Rev,Sequence,Param_Seq asc",V.Local.sSQL)
+	'F.Intrinsic.UI.Msgbox(V.Local.sSQL)
+	F.ODBC.Connection!con.OpenRecordsetRO("rstRpt",V.Local.sSQL)
+	F.Intrinsic.Control.Dountil(V.ODBC.con!rstRpt.EOF,=,True)
+	'F.Intrinsic.UI.Msgbox(V.ODBC.con!rstRpt.FieldVal!Template_Rpt_ID)
+		'F.Intrinsic.UI.Msgbox("Printing the Report")
+		F.Intrinsic.String.Concat(V.Global.sPart,"*!*",V.Global.sCust,"*!*",V.Global.sJob,"*!*",V.ODBC.con!rstRpt.FieldValLTrim!Sequence,"*!*",V.ODBC.con!rstRpt.FieldVal!Job_Type,V.Local.sParamV)
+		F.Intrinsic.String.Split(V.Local.sParamV,"*!*",V.Local.sParamV)
+		Function.Global.BI.PrintReport(V.ODBC.con!rstRpt.FieldVal!Template_Rpt_ID,0,V.Local.sParamN,V.Local.sParamV)
+		F.ODBC.con!rstRpt.MoveNext
+	F.Intrinsic.Control.Loop
+	F.ODBC.con!rstRpt.Close
+	F.Intrinsic.Control.End
+'F.Intrinsic.Control.EndIf
+
+
+
+Program.Sub.Print_Seq.End
+
+Program.Sub.UCase.Start
+V.Local.sTReq.Declare(String)
+
+F.Intrinsic.String.UCase(V.Screen.F_Params!txtTReq.Text,V.Local.sTReq)
+Gui.F_Params.txtTReq.Text(V.Local.sTReq)
+
+
+Program.Sub.UCase.End
+
+Program.Sub.Part_Seq_Type.Start
+'V.Local.sLoc.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sPartSelect.Declare(String)
+
+'V.Local.sUser.Declare(String)
+
+'V.Local.sUser.Set(V.Caller.User)
+'V.Local.sLoc.Set(V.COBOLConfig.OELoc)
+'V.Passed.777777.Set(1)
+'
+F.Intrinsic.String.Left(V.Global.sPart,17,V.Global.sPart)
+F.Intrinsic.String.Split("Part Number*!*Sequence*!*Part Rev*!*Job Type","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("2500*!*1500*!*1000*!*1000","*!*",V.Local.iWidths)
+'F.Intrinsic.UI.Msgbox("Titles and Widths created")
+F.Intrinsic.String.Trim(V.Global.sPart,V.Global.sPart)
+F.Intrinsic.String.Concat("Select distinct PART_No, Sequence,Part_Rev,Job_Type from ATG_3338_INSPEC_DB where CustNo Like'",V.Global.sCust,"%' and Part_No='",V.Global.sPart.Trim,"' and Job_Type=",V.Global.sRtrRev," order by Part_Rev,Sequence",V.Local.sSQL)
+'F.Intrinsic.UI.Msgbox(V.Local.sSQL)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.MiniBrowser("Select Sequence","con",V.Local.sSQL,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,"<>","***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sPartSelect)
+	V.Global.sPart.Set(V.Local.sPartSelect(0))
+	V.Global.sRSeq.Set(V.Local.sPartSelect(1))
+	V.Global.sJT.Set(V.Local.sPartSelect(3))
+	'Gui.F_Part.txtPart.Text(V.Global.sCPart)
+	'Gui.F_Part.cboSeq.Text(V.Global.sCSeq)
+F.Intrinsic.Control.ElseIf(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.Control.CallSub(Progend)
+F.Intrinsic.Control.EndIf
+
+
+Program.Sub.Part_Seq_Type.End
+
+
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+Program.Sub.Comments.End
